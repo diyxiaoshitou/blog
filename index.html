@@ -64,6 +64,81 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-nginx-配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/14/nginx-配置/" class="article-date">
+  <time datetime="2016-07-13T16:00:01.000Z" itemprop="datePublished">2016-07-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/14/nginx-配置/">nginx 配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p><code>#user  nobody;</code><br><code>worker_processes  1;</code></p>
+<p>#error_log  logs/error.log;</p>
+<p>#error_log  logs/error.log  notice;</p>
+<p>#error_log  logs/error.log  info;</p>
+<p>#pid        logs/nginx.pid;</p>
+<p>events {<br>        worker_connections  1024;<br>}</p>
+<p>http {</p>
+<pre><code>include       mime.types;
+default_type  application/octet-stream;
+
+log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;
+        &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;
+        &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;
+</code></pre><p>#access_log  logs/access.log  main;<br>        sendfile on;<br>        tcp_nopush on;<br>        tcp_nodelay on;</p>
+<pre><code>client_body_timeout   10;
+client_header_timeout 10;
+</code></pre><p>#keepalive_timeout  0;<br>        keepalive_timeout  65;<br>        send_timeout          10;</p>
+<pre><code>server_tokens off;
+client_max_body_size 300m;
+client_body_buffer_size 8K;
+client_header_buffer_size 1k;
+large_client_header_buffers 4 4k;
+server_names_hash_bucket_size 128;
+</code></pre><h2 id="gzip"><a href="#gzip" class="headerlink" title="gzip"></a>gzip</h2><pre><code>gzip on;
+gzip_disable &quot;MSIE [1-6]\.&quot;;
+gzip_vary on;
+gzip_min_length  1000;
+gzip_proxied     expired no-cache no-store private auth;
+gzip_comp_level 6;
+gzip_buffers 16 8k;
+gzip_http_version 1.1;
+gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+include servers/*.conf;
+</code></pre><p>#add_header Access-Control-Allow-Origin *;</p>
+<p>#add_header Access-Control-Allow-Headers X-Requested-With;</p>
+<p>#add_header Access-Control-Allow-Methods GET,POST,OPTIONS;<br>}</p>
+<p>`</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/14/nginx-配置/" data-id="ciql4sygu0006f785ry5kvs2x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-nignt" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/14/nignt/" class="article-date">
@@ -90,7 +165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/14/nignt/" data-id="ciqkt9dy7000621s60xhavigi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/14/nignt/" data-id="ciql4syh80008f785d42xkyau" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/14/My-Gallery/" data-id="ciqkt9dy1000221s6hcc6qzo5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/14/My-Gallery/" data-id="ciql4sygo0001f7855ukmgyfr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/14/happy-to-you/" data-id="ciqkt9dy7000521s6qhiydm0g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/14/happy-to-you/" data-id="ciql4sygt0004f785818erdtl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/26/bobo/" data-id="ciqkt9dy4000321s6yeepskbf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/26/bobo/" data-id="ciql4sygq0002f785bod69piv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +327,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/26/feng/" data-id="ciqkt9dy5000421s60ne1elcr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/26/feng/" data-id="ciql4sygs0003f785hlj4otcl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -297,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/25/hello-world/" data-id="ciqkt9dya000721s6l1vdiczc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/25/hello-world/" data-id="ciql4sygu0005f785lbo6xp11" class="article-share-link">Share</a>
       
       
     </footer>
@@ -324,7 +399,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
     </div>
   </div>
 
@@ -335,6 +410,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/07/14/nginx-配置/">nginx 配置</a>
+          </li>
         
           <li>
             <a href="/2016/06/14/nignt/">nignt</a>
@@ -350,10 +429,6 @@
         
           <li>
             <a href="/2016/05/26/bobo/">bobo</a>
-          </li>
-        
-          <li>
-            <a href="/2016/05/26/feng/">feng</a>
           </li>
         
       </ul>
