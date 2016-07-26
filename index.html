@@ -64,6 +64,129 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-wordpress体验" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/26/wordpress体验/" class="article-date">
+  <time datetime="2016-07-26T12:09:59.000Z" itemprop="datePublished">2016-07-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/26/wordpress体验/">wordpress体验</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<pre><code>front-page  首页
+home  / index   新闻列表
+single  文章页
+page  单页面
+</code></pre><h2 id="页面规划"><a href="#页面规划" class="headerlink" title="页面规划"></a>页面规划</h2><p>所有的标题的<code>导航|子导航</code>，应该用 <strong>分类，和单页面</strong></p>
+<p>里边的内容，应该用 <strong>新闻列表，帖子列表</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloginfo(<span class="string">'template_url'</span>)  //目录根路径</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/26/wordpress体验/" data-id="cir3kddem0005izauuyirad3a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-单行向上滚动" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/26/单行向上滚动/" class="article-date">
+  <time datetime="2016-07-26T10:14:02.000Z" itemprop="datePublished">2016-07-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/26/单行向上滚动/">单行向上滚动</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">	&lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">	&lt;script src=<span class="string">"http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">	&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">		p&#123; height: 80px;  overflow: hidden; width: 200px;&#125;</span><br><span class="line">		p a&#123; display: block; height: 80px;  &#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=<span class="string">"ty-text-slide"</span> style=<span class="string">"position:relative;"</span>&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;中央部门晒决算 国税系统津贴福利开支占近6成_新闻中心_中国网 &lt;/a&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;房地产税法最快2017年通过 百万房产或每年缴5千 &lt;/a&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;美媒:中国援助阿富汗打击恐怖组织 首批军事装备抵阿 &lt;/a&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">		//          显示滚动文字</span><br><span class="line">            var scroll_event;</span><br><span class="line">            var <span class="variable">$scroll_parent</span> = $(<span class="string">"#ty-text-slide"</span>);</span><br><span class="line">            var scroll_height = <span class="variable">$scroll_parent</span>.find(<span class="string">'a:first'</span>).height();</span><br><span class="line">            <span class="variable">$scroll_parent</span>.hover(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                clearInterval(scroll_event);</span><br><span class="line">            &#125;, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                scroll_event = <span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                    var _this = <span class="variable">$scroll_parent</span>;</span><br><span class="line">                    _this.find(<span class="string">'a:first'</span>).animate(&#123;<span class="string">"marginTop"</span>: -scroll_height + <span class="string">'px'</span>&#125;, 500, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                        _this.find(<span class="string">"a:first"</span>).css(&#123;marginTop: <span class="string">"0px"</span>&#125;).appendTo(_this);</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;, 2000);</span><br><span class="line">            &#125;).trigger(<span class="string">"mouseout"</span>);</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/26/单行向上滚动/" data-id="cir3kddez000aizau9udfthbo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/14/markdown/" class="article-date">
+  <time datetime="2016-07-14T02:03:24.000Z" itemprop="datePublished">2016-07-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/14/markdown/">markdown</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p> 插入几行代码用tab或者四个空格，那么如果要插入几百行的代码怎么操作呢？</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/14/markdown/" data-id="cir3kdde60000izauuvk921ak" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-nginx-conf" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/07/14/nginx-conf/" class="article-date">
@@ -98,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/14/nginx-conf/" data-id="ciqlli1i30003em85wzu96ta2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/14/nginx-conf/" data-id="cir3kddel0004izaul2ou3jpz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
@@ -139,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/14/phone-conf/" data-id="ciqlli1i40004em85ik34am18" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/14/phone-conf/" data-id="cir3kddev0007izauhkr0u3gt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
@@ -180,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/14/wordpress-conf/" data-id="ciqlli1i80006em85gdqxju0q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/14/wordpress-conf/" data-id="cir3kddex0008izau6rip0ae3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
@@ -227,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/25/hello-world/" data-id="ciqlli1hz0002em854cah9mr8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/25/hello-world/" data-id="cir3kddej0003izaugqn6zx15" class="article-share-link">Share</a>
       
       
     </footer>
@@ -249,7 +372,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
     </div>
   </div>
 
@@ -259,7 +382,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/nginx/" style="font-size: 10px;">nginx</a>
+      <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/nginx/" style="font-size: 20px;">nginx</a>
     </div>
   </div>
 
@@ -281,19 +404,23 @@
       <ul>
         
           <li>
+            <a href="/2016/07/26/wordpress体验/">wordpress体验</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/26/单行向上滚动/">单行向上滚动</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/14/markdown/">markdown</a>
+          </li>
+        
+          <li>
             <a href="/2016/07/14/nginx-conf/">nginx.conf</a>
           </li>
         
           <li>
             <a href="/2016/07/14/phone-conf/">phone.conf</a>
-          </li>
-        
-          <li>
-            <a href="/2016/07/14/wordpress-conf/">wordpress_conf</a>
-          </li>
-        
-          <li>
-            <a href="/2016/05/25/hello-world/">Hello World</a>
           </li>
         
       </ul>
