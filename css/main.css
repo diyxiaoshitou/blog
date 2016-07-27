@@ -1550,7 +1550,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffdfff;
+  background: #53a3f6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2520,4 +2520,20 @@ body {
   .post-body {
     text-align: justify;
   }
+}
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+.post-body {
+  font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+pre,
+code,
+body {
+  font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.site-meta {
+  padding: 20px 10px;
 }
