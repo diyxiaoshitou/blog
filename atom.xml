@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>没有比人更高的山，没有比脚更远的路</title>
+  <subtitle>Good good study day day up</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://diyxiaoshitou.github.io/"/>
+  <updated>2016-07-27T05:43:34.000Z</updated>
+  <id>http://diyxiaoshitou.github.io/</id>
+  
+  <author>
+    <name>diyxiaoshitou</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wordpress菜单</title>
+    <link href="http://diyxiaoshitou.github.io/2016/07/27/wordpress%E8%8F%9C%E5%8D%95/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/27/wordpress菜单/</id>
+    <published>2016-07-27T03:14:36.000Z</published>
+    <updated>2016-07-27T05:43:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>1.添加菜单 <strong>function.php</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//添加菜单</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">function</span>_exists(<span class="string">'register_nav_menus'</span>)) &#123;</span><br><span class="line">    register_nav_menus(</span><br><span class="line">        array(</span><br><span class="line">            <span class="string">'header-menu'</span>=&gt;__(<span class="string">'主菜单'</span>), //  设置菜单的位置,设置后会在后台显示出来,后台可以设置主题对应的位置</span><br><span class="line">            <span class="string">'sub-menu'</span>=&gt;__(<span class="string">'副菜单'</span>),</span><br><span class="line">            <span class="string">'sider-menu'</span>=&gt;__(<span class="string">'侧边菜单'</span>),</span><br><span class="line">            <span class="string">'footer-menu'</span>=&gt;__(<span class="string">'底部的菜单'</span>),</span><br><span class="line"></span><br><span class="line">        )</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.页面调用 <strong>菜单</strong><br><code>下面的代码不用都写后台可以设置菜单对应的位置</code><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">wp_nav_menu(</span><br><span class="line">    <span class="keyword">array</span>(</span><br><span class="line">        <span class="string">'theme_location'</span> =&gt;<span class="string">'sub-menu'</span>, <span class="comment">//菜单的位置</span></span><br><span class="line">        <span class="string">'menu'</span>=&gt;<span class="string">'sub-menu'</span>,  <span class="comment">//菜单的名称</span></span><br><span class="line">        <span class="string">'container'</span>       =&gt; <span class="string">'nav'</span>, <span class="comment">//最外层容器标签名</span></span><br><span class="line">        <span class="string">'container_class'</span> =&gt; <span class="string">'primary'</span>, <span class="comment">//最外层容器class名</span></span><br><span class="line">        <span class="string">'container_id'</span>    =&gt; <span class="string">'feng'</span>,<span class="comment">//最外层容器id值</span></span><br><span class="line">        <span class="string">'menu_class'</span>      =&gt; <span class="string">'sf-menu'</span>, <span class="comment">//ul标签class</span></span><br><span class="line">        <span class="string">'menu_id'</span>         =&gt; <span class="string">'topnav'</span>,<span class="comment">//ul标签id</span></span><br><span class="line">        <span class="string">'echo'</span>            =&gt; <span class="keyword">true</span>,<span class="comment">//是否打印，默认是true，如果想将导航的代码作为赋值使用，可设置为false</span></span><br><span class="line">        <span class="string">'fallback_cb'</span>     =&gt; <span class="string">'wp_page_menu'</span>,<span class="comment">//备用的导航菜单函数，用于没有在后台设置导航时调用</span></span><br><span class="line">        <span class="string">'before'</span>          =&gt; <span class="string">'&lt;p&gt;'</span>,<span class="comment">//显示在导航a标签之前</span></span><br><span class="line">        <span class="string">'after'</span>           =&gt; <span class="string">'&lt;/p&gt;'</span>,<span class="comment">//显示在导航a标签之后</span></span><br><span class="line">        <span class="string">'link_before'</span>     =&gt; <span class="string">'?'</span>,<span class="comment">//显示在导航链接名之后</span></span><br><span class="line">        <span class="string">'link_after'</span>      =&gt; <span class="string">'??'</span>,<span class="comment">//显示在导航链接名之前</span></span><br><span class="line"><span class="comment">//        'items_wrap'      =&gt; '&lt;ul id="%1$s"&gt;%3$s&lt;/ul&gt;', //输出ul的格式,如果打开ul的class将去掉</span></span><br><span class="line">        <span class="string">'depth'</span>           =&gt; <span class="number">0</span>,<span class="comment">////显示的菜单层数，默认0，0是显示所有层</span></span><br><span class="line">        <span class="string">'walker'</span>          =&gt; <span class="string">''</span><span class="comment">// //调用一个对象定义显示导航菜单 ));例如菜单的描述</span></span><br><span class="line"></span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;1.添加菜单 &lt;strong&gt;function.php&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/spa
+    
+    </summary>
+    
+    
+      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/tags/wordpress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wordpress体验</title>
+    <link href="http://diyxiaoshitou.github.io/2016/07/26/wordpress%E4%BD%93%E9%AA%8C/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/26/wordpress体验/</id>
+    <published>2016-07-26T12:09:59.000Z</published>
+    <updated>2016-07-27T16:08:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<blockquote>
+<p>front-page  首页<br>    home  / index   新闻列表<br>    single  文章页<br>    page  单页面</p>
+</blockquote>
+<h2 id="页面规划"><a href="#页面规划" class="headerlink" title="页面规划"></a>页面规划</h2><p>所有的标题的<code>导航|子导航</code>，应该用 <strong>分类，和单页面</strong></p>
+<p>里边的内容，应该用 <strong>新闻列表，帖子列表</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloginfo(<span class="string">'template_url'</span>)  //目录根路径</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;front-page  首页&lt;br&gt;    home  / index   新闻列表&lt;br&gt;    single  文章页&lt;br&gt;    page  单页面&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;页面规划&quot;&gt;&lt;a href=
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>单行向上滚动</title>
+    <link href="http://diyxiaoshitou.github.io/2016/07/26/%E5%8D%95%E8%A1%8C%E5%90%91%E4%B8%8A%E6%BB%9A%E5%8A%A8/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/26/单行向上滚动/</id>
+    <published>2016-07-26T10:14:02.000Z</published>
+    <updated>2016-07-26T10:17:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">	&lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">	&lt;script src=<span class="string">"http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">	&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">		p&#123; height: 80px;  overflow: hidden; width: 200px;&#125;</span><br><span class="line">		p a&#123; display: block; height: 80px;  &#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=<span class="string">"ty-text-slide"</span> style=<span class="string">"position:relative;"</span>&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;中央部门晒决算 国税系统津贴福利开支占近6成_新闻中心_中国网 &lt;/a&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;房地产税法最快2017年通过 百万房产或每年缴5千 &lt;/a&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;美媒:中国援助阿富汗打击恐怖组织 首批军事装备抵阿 &lt;/a&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">		//          显示滚动文字</span><br><span class="line">            var scroll_event;</span><br><span class="line">            var <span class="variable">$scroll_parent</span> = $(<span class="string">"#ty-text-slide"</span>);</span><br><span class="line">            var scroll_height = <span class="variable">$scroll_parent</span>.find(<span class="string">'a:first'</span>).height();</span><br><span class="line">            <span class="variable">$scroll_parent</span>.hover(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                clearInterval(scroll_event);</span><br><span class="line">            &#125;, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                scroll_event = <span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                    var _this = <span class="variable">$scroll_parent</span>;</span><br><span class="line">                    _this.find(<span class="string">'a:first'</span>).animate(&#123;<span class="string">"marginTop"</span>: -scroll_height + <span class="string">'px'</span>&#125;, 500, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                        _this.find(<span class="string">"a:first"</span>).css(&#123;marginTop: <span class="string">"0px"</span>&#125;).appendTo(_this);</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;, 2000);</span><br><span class="line">            &#125;).trigger(<span class="string">"mouseout"</span>);</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://diyxiaoshitou.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Travis CI 自动更新 GitHub Pages</title>
+    <link href="http://diyxiaoshitou.github.io/2016/07/14/markdown/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/14/markdown/</id>
+    <published>2016-07-14T02:03:24.000Z</published>
+    <updated>2016-07-27T17:51:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>每次更改完 NexT 文档 都要手动部署到 GitHub Pages，重复的次数多了就显得很麻烦，出错的几率也会变大。文档源码放置在 master 分支，最终部署文件在 gh-pages 分支。当在 master 分支更改某些内容之后，通过运行 gulp dist 来生成最终部署的 HTML 文件到 dist 目录，随后再进入 dist 目录初始化 git 仓库、添加文件、提交文件，最后将提交强制推送到远程 gh-pages 分支（因当心我会误将最终部署的 HTML 文件提交到 master 分支导致源码丢失，我在 GitHub 上把 master 分支给锁定了）。除此之外还有另外一个问题：如果 master 分支有 Pull Requests，我需要先将更新取回本地，然后编译更新再提交回远程 gh-pages 分支。</p>
+<p>年轻的想法</p>
+<p>于是，我就想这说将这个过程自动化。首先考虑了使用 GitHub Webhooks，这是 Github 提供的一种机制，使应用能与 Github 通讯。这种机制实际上就是 Pub/Sub，当 Github 监测到资源（如仓库）有变化就往预先设定的 URL 发送一个 POST 请求（Pub），告知变化情况，而后接收变化的服务器（Sub）即可做一些额外的事情。</p>
+<p>这个思路需要有一个服务器并启动一个服务来接收 Github 的请求。这里又有种不同的策略，这两种策略都是基于源码放置在 Github 的前提。第一个是源码将最终文档直接部署在这台服务器上（如使用 Nginx），当接收到 Github 通知直接编译更新到服务器指定的文件夹下即可。另一种策略是当服务器接收到通知后编译更新，而后将编译后的版本提交到 Github 仓库的 gh-pages 分支，让 Github 做 Host。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;每次更改完 NexT 文档 都要手动部署到 GitHub Pages，重复的次数多了就显得很麻烦，出错的几率也会变大。文档源码放置在 master 分支，最终部署文件在 gh-pages 分支。当在 master 分支更改某些内容之后，通过运行 gulp dist 来生成最
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nginx.conf</title>
+    <link href="http://diyxiaoshitou.github.io/2016/07/14/nginx-conf/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/14/nginx-conf/</id>
+    <published>2016-07-13T17:38:06.000Z</published>
+    <updated>2016-07-27T16:11:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>这个是nginx的主配置文件，其中 <strong><code>include servers/*.conf;</code></strong>  里包含了servers配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">		worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line"></span><br><span class="line">		include       mime.types;</span><br><span class="line">		default_<span class="built_in">type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">log</span>_format  main  <span class="string">'$remote_addr - $remote_user [$time_local] "$request" '</span></span><br><span class="line">				<span class="string">'$status $body_bytes_sent "$http_referer" '</span></span><br><span class="line">				<span class="string">'"$http_user_agent" "$http_x_forwarded_for"'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line">		sendfile on;</span><br><span class="line">		tcp_nopush on;</span><br><span class="line">		tcp_nodelay on;</span><br><span class="line"></span><br><span class="line">		client_body_timeout   10;</span><br><span class="line">		client_header_timeout 10;</span><br><span class="line"><span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">		keepalive_timeout  65;</span><br><span class="line">		send_timeout          10;</span><br><span class="line"></span><br><span class="line">		server_tokens off;</span><br><span class="line">		client_max_body_size 300m;</span><br><span class="line">		client_body_buffer_size 8K;</span><br><span class="line">		client_header_buffer_size 1k;</span><br><span class="line">		large_client_header_buffers 4 4k;</span><br><span class="line">		server_names_<span class="built_in">hash</span>_bucket_size 128;</span><br><span class="line"></span><br><span class="line"><span class="comment">## gzip</span></span><br><span class="line">		gzip on;</span><br><span class="line">		gzip_<span class="built_in">disable</span> <span class="string">"MSIE [1-6]\."</span>;</span><br><span class="line">		gzip_vary on;</span><br><span class="line">		gzip_min_length  1000;</span><br><span class="line">		gzip_proxied     expired no-cache no-store private auth;</span><br><span class="line">		gzip_comp_level 6;</span><br><span class="line">		gzip_buffers 16 8k;</span><br><span class="line">		gzip_http_version 1.1;</span><br><span class="line">		gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;</span><br><span class="line"></span><br><span class="line">		include servers/*.conf;</span><br><span class="line"><span class="comment">#add_header Access-Control-Allow-Origin *;</span></span><br><span class="line"><span class="comment">#add_header Access-Control-Allow-Headers X-Requested-With;</span></span><br><span class="line"><span class="comment">#add_header Access-Control-Allow-Methods GET,POST,OPTIONS;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;这个是nginx的主配置文件，其中 &lt;strong&gt;&lt;code&gt;include servers/*.conf;&lt;/code&gt;&lt;/strong&gt;  里包含了servers配置文件&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;
+    
+    </summary>
+    
+    
+      <category term="nginx" scheme="http://diyxiaoshitou.github.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>phone.conf</title>
+    <link href="http://diyxiaoshitou.github.io/2016/07/14/phone-conf/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/14/phone-conf/</id>
+    <published>2016-07-13T17:27:18.000Z</published>
+    <updated>2016-07-13T17:36:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="nginx反向代理"><a href="#nginx反向代理" class="headerlink" title="nginx反向代理"></a>nginx反向代理</h2><p>当访问接口 <a href="http://phone.app/v1" target="_blank" rel="external">http://phone.app/v1</a> 时，会自动代理到 <a href="http://10.2.10.92:8080/v1" target="_blank" rel="external">http://10.2.10.92:8080/v1</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-------------------------------------------</span></span><br><span class="line"><span class="comment">#java 站点 负载模板配置文件，将_DOMAIN_替换成相应的域名,_PORT_ 替换成对应的端口</span></span><br><span class="line"><span class="comment">#-------------------------------------------</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#upstream mysvr &#123;</span></span><br><span class="line"><span class="comment">##weigth参数表示权值，权值越高被分配到的几率越大</span></span><br><span class="line"><span class="comment">##本机上的Squid开启3128端口</span></span><br><span class="line"><span class="comment">#	server 10.2.10.92:8080 weight=6;</span></span><br><span class="line"><span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">	listen 80;</span><br><span class="line">	server_name phone.app;</span><br><span class="line">	root   /Users/diyxiaoshitou/WebstormProjects/phone;</span><br><span class="line">	index  index.html index.htm;</span><br><span class="line">	location /v1 &#123;</span><br><span class="line">		proxy_pass http://10.2.10.92:8080;</span><br><span class="line">		proxy_redirect  off;</span><br><span class="line">		proxy_<span class="built_in">set</span>_header    Host            <span class="variable">$host</span>;</span><br><span class="line">		proxy_<span class="built_in">set</span>_header    X-Real-IP       <span class="variable">$remote_addr</span>;</span><br><span class="line">		proxy_<span class="built_in">set</span>_header    X-Forwarded-for <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">		proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;</span><br><span class="line">		proxy_max_temp_file_size 0;</span><br><span class="line">		proxy_connect_timeout      90;</span><br><span class="line">		proxy_send_timeout         90;</span><br><span class="line">		proxy_<span class="built_in">read</span>_timeout         90;</span><br><span class="line">		proxy_buffer_size          4k;</span><br><span class="line">		proxy_buffers              4 32k;</span><br><span class="line">		proxy_busy_buffers_size    64k;</span><br><span class="line">		proxy_temp_file_write_size 64k;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;nginx反向代理&quot;&gt;&lt;a href=&quot;#nginx反向代理&quot; class=&quot;headerlink&quot; title=&quot;nginx反向代理&quot;&gt;&lt;/a&gt;nginx反向代理&lt;/h2&gt;&lt;p&gt;当访问接口 &lt;a href=&quot;http://phone.app/v1&quot; t
+    
+    </summary>
+    
+    
+      <category term="nginx" scheme="http://diyxiaoshitou.github.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wordpress_conf</title>
+    <link href="http://diyxiaoshitou.github.io/2016/07/14/wordpress-conf/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/14/wordpress-conf/</id>
+    <published>2016-07-13T17:15:37.000Z</published>
+    <updated>2016-07-13T17:36:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>这个配置文件主要配置server_name和root</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">   listen       80;</span><br><span class="line">   server_name  wordpress.app;</span><br><span class="line">   root   /Users/diyxiaoshitou/wordpress;</span><br><span class="line">   index  index.html index.htm index.php;</span><br><span class="line"></span><br><span class="line">   <span class="comment">#charset koi8-r;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#   access_log  logs/access.log;</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">#error_page  404              /404.html;</span></span><br><span class="line"></span><br><span class="line">   <span class="comment"># redirect server error pages to the static page /50x.html</span></span><br><span class="line">   <span class="comment">#</span></span><br><span class="line">   error_page   500 502 503 504  /50x.html;</span><br><span class="line">   location = /50x.html &#123;</span><br><span class="line">       root   html;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment"># proxy the PHP scripts to Apache listening on 127.0.0.1:80</span></span><br><span class="line">   <span class="comment">#</span></span><br><span class="line">   <span class="comment">#location ~ \.php$ &#123;</span></span><br><span class="line">   <span class="comment">#    proxy_pass   http://127.0.0.1;</span></span><br><span class="line">   <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">   location ~ /\. &#123;</span><br><span class="line">           deny all;</span><br><span class="line">           access_<span class="built_in">log</span> off;</span><br><span class="line">           <span class="built_in">log</span>_not_found off;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span></span><br><span class="line">   <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   location ~ \.php$ &#123;</span><br><span class="line">       fastcgi_buffers 2 256k;</span><br><span class="line">       fastcgi_buffer_size 128K;</span><br><span class="line">       fastcgi_busy_buffers_size 256K;</span><br><span class="line">       fastcgi_temp_file_write_size 256k;</span><br><span class="line">       fastcgi_connect_timeout 3000;</span><br><span class="line">       fastcgi_send_timeout 3000;</span><br><span class="line">       fastcgi_<span class="built_in">read</span>_timeout 3000;</span><br><span class="line">       fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">       fastcgi_index  index.php;</span><br><span class="line">       <span class="comment">#fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">       fastcgi_param  SCRIPT_FILENAME  <span class="variable">$document_root</span><span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">       include        fastcgi_params;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   <span class="comment"># deny access to .htaccess files, if Apache's document root</span></span><br><span class="line">   <span class="comment"># concurs with nginx's one</span></span><br><span class="line">   <span class="comment">#</span></span><br><span class="line">   location ~ /\.ht &#123;</span><br><span class="line">       deny  all;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   location ~ /\.git &#123;</span><br><span class="line">       deny  all;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;这个配置文件主要配置server_name和root&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;spa
+    
+    </summary>
+    
+    
+      <category term="nginx" scheme="http://diyxiaoshitou.github.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://diyxiaoshitou.github.io/2016/05/25/hello-world/"/>
+    <id>http://diyxiaoshitou.github.io/2016/05/25/hello-world/</id>
+    <published>2016-05-25T14:16:40.000Z</published>
+    <updated>2016-07-14T02:01:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
