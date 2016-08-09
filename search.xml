@@ -4,6 +4,67 @@
   
     
     <entry>
+      <title><![CDATA[wordpress 缩略图功能函数 the_post_thumbnail]]></title>
+      <url>http://diyxiaoshitou.github.io/2016/08/09/%E7%BC%A9%E7%95%A5%E5%9B%BE/</url>
+      <content type="html"><![CDATA[<p>很多 WordPress 主题，特别是那些杂志型的主题，会给每篇日志加上一张缩略图，这种展现方式一般用在首页，可能单独出现，或者和日志摘要一起。但是目前位置没有一个标准的方法去实现日志缩略图，很多主题是使用 WordPress 自定义字段来实现日志缩略图功能，这样的设置比较复杂，虽然我在制作的很多 WordPress 项目中都是用这个方法，并且设置了直接上传缩略图的方法，但是还是略显麻烦。</p>
+<p>从 WordPress 2.9 开始，WordPress 开始内置了日志缩略图的功能，并且提供了详细的接口让主题的作者设置和调用日志的缩略图。</p>
+<p>第一步：让主题支持缩略图功能<br>首先确保你的wordpress版本在2.9之上，然后在你的当前主题文件夹中找到并编辑functions.php文件，加入下面这句代码<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> ( function_exists( <span class="string">'add_theme_support'</span> ) )  </span><br><span class="line">    add_theme_support( <span class="string">'post-thumbnails'</span> );</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>(注：主题文件夹都保存在wp-content/themes/目录下)</p>
+<p>第二步：使用缩略图<br>在需要显示缩略图的地方调用the_post_thumbnail函数，比如你想在首页为每篇文章显示缩略图，可以在index.php文件中加入下面这样的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?</span><br><span class="line"> php if ( function_exists( &apos;the_post_thumbnail&apos; ) )  </span><br><span class="line">          the_post_thumbnail( &apos;thumbnail&apos; );</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>这样就能显示缩略图了，其中参数”thumbnail”表示缩略图显示的大小。wordpress预置了4种大小，你可以使用下面的4个参数来替换’thumbnail’，当然不同的台数显示的图片大小也不同</p>
+<p>Ø Thumbnail (缩略图尺寸)</p>
+<p>Ø Medium （中等尺寸）</p>
+<p>Ø Large （大尺寸）</p>
+<p>Ø Full （原始尺寸）</p>
+<p>具体尺寸大小可以在后台“设置”中的“媒体”选项中进行设置</p>
+<p>你可以设置3种不同的大小，以方便在不同的情况下使用。</p>
+<p>至此你的主题已经支持缩略图功能并可以灵活使用了。</p>
+<p>下面我将介绍一下更高级的应用技巧。</p>
+<p>自定义缩略图尺寸的三种方法<br>方法一：后台设置<br>就是上面提到的方法，不过这种方法只设置3种大小。</p>
+<p>方法二：自定义<br>在调用the_post_thumbnail函数的时候，可以直接指定缩略图的大小<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(array(200,200)); // 显示200X200尺寸的缩略图</span><br></pre></td></tr></table></figure></p>
+<p>这种方法的优点的灵活，可以随时通过代码的调用显示不同尺寸的图片，缺点是修改有点麻烦，如果你有多处这样的代码，修改起来就要把每一处代码都要修改掉。</p>
+<p>方法三：增加预置尺寸<br>通过前面的介绍我们已经知道，wordpress为我们预置了三种可以设置的尺寸。可不可以再增加一些预置的尺寸呢？当然可以，我们要用到的函数是add_image_size。比如我们想在首页和分类页面使用不同的缩略图大小，就可以先预置homepage-thumb和category-thumb这两大小。方法是在functions.php文件中加入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if ( function_exists( &apos;add_image_size&apos; ) )&#123;  </span><br><span class="line">    add_image_size( &apos;category-thumb&apos;, 200, 200 ); // 预置一个名为’category-thumb’,200*200的缩略图大小  </span><br><span class="line">    add_image_size( &apos;homepage-thumb&apos;, 220, 180); //预置一个名为’homepage-thumb’,220*180的缩略图大小  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之后就可以在首页调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘homepage-thumb’);</span><br></pre></td></tr></table></figure></p>
+<p>显示220*180的缩略图</p>
+<p>在分类页面调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘category-thumb’);</span><br></pre></td></tr></table></figure></p>
+<p>则显示200*200的缩略图。</p>
+<p>定义缩略图的样式<br>首先我们先来看一下the_post_thumbnail函数输出的html是什么样的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;http://domety.com/wp-content/uploads/2010/10/screenshot-150x150.png&quot;</span><br><span class="line">class=&quot;attachment-thumbnail wp-post-image&quot; alt=&quot;&quot; title=&quot;screenshot&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>由此可以看出，我们可以用css定义类attachment-thumbnail的样式就可以了。</p>
+<p>但是如果我想分别为首页和分类页面定义不同的样式，该怎么做呢？</p>
+<p>方法一是增加一个div，针对不同的div定义不同的样式，在此不多做介绍。</p>
+<p>我要介绍的是另一种方法：给缩略图添加属性</p>
+<p>你可以测试一下，如果把the_post_thumbnail(“thumbnail”)修改为下面这样的代码，看看输出的html结果是什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘thumbnail’,array(‘class’ =&gt; ‘homepage-thumb’));</span><br></pre></td></tr></table></figure>
+<p>我这边输出的html为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;http://domety.com/wp-content/uploads/2010/10/screenshot-150x150.png&quot;</span><br><span class="line">class=&quot;homepage-thumb wp-post-image&quot; alt=&quot;&quot; title=&quot;screenshot&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>可以和之前的html对比一下，不难发现class属性变成了我们设置的’homepage-thumb’。可以通过这种方法，把首页缩略图和分类页面的缩略图设置为不同的class属性。</p>
+<p>改变THE_POST_THUMBNAIL的HTML输出<br>我们可以使用filter来改变缩略图的html输出结果，下面的这段代码为缩略图加了一个文章链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">add_filter( &apos;post_thumbnail_html&apos;, &apos;my_post_image_html&apos;, 10, 3 );  </span><br><span class="line">function my_post_image_html( $html, $post_id, $post_image_id ) &#123;  </span><br><span class="line">    $html = &apos;&lt;a href=&quot;&apos; . get_permalink( $post_id ) . &apos;&quot; title=&quot;&apos; . esc_attr( get_post_field( &apos;post_title&apos;, $post_id ) ) . &apos;&quot;&gt;&apos; . $html . &apos;&lt;/a&gt;&apos;;  </span><br><span class="line">    return $html;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当你点击缩略图的时候就会跳转到相应的文章内页。</p>
+<p>检测文章是否有缩略图<br>一个良好的习惯就是在调用the_post_thumbnail函数之前，先检测一下该文章有没有设置缩略图，检测的方法是调用has_post_thumbnail函数，代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php if ( has_post_thumbnail() )  </span><br><span class="line">    the_post_thumbnail( &apos;thumbnail&apos; );?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结合本站之前的提取文章内图片做为缩略图的方法，现在可以合二为一：首先判断文章有没有设置缩略图，如果有就直接显示，如果没有再提取文章内的图片为缩略图。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/*  </span><br><span class="line"></span><br><span class="line">* 缩略图</span><br><span class="line"></span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">function dm_the_thumbnail() &#123;  </span><br><span class="line"></span><br><span class="line">    global $post;  </span><br><span class="line"></span><br><span class="line">    // 判断该文章是否设置的缩略图，如果有则直接显示  </span><br><span class="line"></span><br><span class="line">    if ( has_post_thumbnail() ) &#123;  </span><br><span class="line"></span><br><span class="line">        echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        the_post_thumbnail(&apos;thumbnail&apos;);  </span><br><span class="line"></span><br><span class="line">        echo &apos;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">    &#125; else &#123; //如果文章没有设置缩略图，则查找文章内是否包含图片  </span><br><span class="line"></span><br><span class="line">        $content = $post-&gt;post_content;  </span><br><span class="line"></span><br><span class="line">        preg_match_all(&apos;/&lt;img.*?(?: |\\t|\\r|\\n)?src=[\&apos;&quot;]?(.+?)[\&apos;&quot;]?(?:(?: |\\t|\\r|\\n)+.*?)?&gt;/sim&apos;, $content, $strResult, PREG_PATTERN_ORDER);  </span><br><span class="line"></span><br><span class="line">        $n = count($strResult[1]);  </span><br><span class="line"></span><br><span class="line">        if($n &gt; 0)&#123; // 如果文章内包含有图片，就用第一张图片做为缩略图  </span><br><span class="line"></span><br><span class="line">            echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&lt;img src=&quot;&apos;.$strResult[1][0].&apos;&quot; alt=&quot;缩略图&quot; /&gt;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        &#125;else &#123; // 如果文章内没有图片，则用默认的图片。  </span><br><span class="line"></span><br><span class="line">            echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&lt;img src=&quot;&apos;.get_bloginfo(&apos;template_url&apos;).&apos;/imgs/default_thumbnail.jpg&quot; alt=&quot;缩略图&quot; /&gt;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        &#125;  </span><br><span class="line"></span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有兴趣的朋友可以把以上代码复制到functions.php文件中，然后调用dm_the_thumbnail()即可。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[获取wordpress内容]]></title>
+      <url>http://diyxiaoshitou.github.io/2016/08/08/%E8%8E%B7%E5%8F%96wordpress%E5%86%85%E5%AE%B9/</url>
+      <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply_filters(&apos;the_content&apos;, $post-&gt;post_content)</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[sublime快捷键]]></title>
+      <url>http://diyxiaoshitou.github.io/2016/08/04/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+      <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">⌘ + shift + k  //编辑标签</span><br><span class="line">control + shift + k  //删除行</span><br><span class="line">⌘ + shift + d  //复制行</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[wordpress菜单]]></title>
       <url>http://diyxiaoshitou.github.io/2016/07/27/wordpress%E8%8F%9C%E5%8D%95/</url>
       <content type="html"><![CDATA[<hr>
@@ -17,11 +78,11 @@
       <title><![CDATA[wordpress体验]]></title>
       <url>http://diyxiaoshitou.github.io/2016/07/26/wordpress%E4%BD%93%E9%AA%8C/</url>
       <content type="html"><![CDATA[<hr>
+<h2 id="阅读设置"><a href="#阅读设置" class="headerlink" title="阅读设置"></a>阅读设置</h2><p><strong>首页显示</strong><br>您的最新文章（index.php）<br><strong>一个静态页面（在下方选择）</strong><br>主页：page.php(默认)  如果有<code>front-page.php</code>会优先调用显示</p>
 <blockquote>
-<p>front-page  首页<br>    home  / index   新闻列表<br>    single  文章页<br>    page  单页面</p>
+<p>front-page  首页<br>    index.php   //（默认首页）新闻列表<br>    page  //单页面<br>    single.php // 文章页<br>    sidebar.php //侧边栏</p>
 </blockquote>
-<h2 id="页面规划"><a href="#页面规划" class="headerlink" title="页面规划"></a>页面规划</h2><p>所有的标题的<code>导航|子导航</code>，应该用 <strong>分类，和单页面</strong></p>
-<p>里边的内容，应该用 <strong>新闻列表，帖子列表</strong></p>
+<h2 id="页面规划"><a href="#页面规划" class="headerlink" title="页面规划"></a>页面规划</h2><p>所有的标题的<code>导航|子导航</code>，应该用 <strong>分类，和单页面</strong><br>里边的内容，应该用 <strong>新闻列表，帖子列表</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloginfo(<span class="string">'template_url'</span>)  //目录根路径</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>

@@ -1,0 +1,799 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="没有比人更高的山，没有比脚更远的路" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="很多 WordPress 主题，特别是那些杂志型的主题，会给每篇日志加上一张缩略图，这种展现方式一般用在首页，可能单独出现，或者和日志摘要一起。但是目前位置没有一个标准的方法去实现日志缩略图，很多主题是使用 WordPress 自定义字段来实现日志缩略图功能，这样的设置比较复杂，虽然我在制作的很多 WordPress 项目中都是用这个方法，并且设置了直接上传缩略图的方法，但是还是略显麻烦。
+从 W">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wordpress 缩略图功能函数 the_post_thumbnail">
+<meta property="og:url" content="http://diyxiaoshitou.github.io/2016/08/09/缩略图/index.html">
+<meta property="og:site_name" content="没有比人更高的山，没有比脚更远的路">
+<meta property="og:description" content="很多 WordPress 主题，特别是那些杂志型的主题，会给每篇日志加上一张缩略图，这种展现方式一般用在首页，可能单独出现，或者和日志摘要一起。但是目前位置没有一个标准的方法去实现日志缩略图，很多主题是使用 WordPress 自定义字段来实现日志缩略图功能，这样的设置比较复杂，虽然我在制作的很多 WordPress 项目中都是用这个方法，并且设置了直接上传缩略图的方法，但是还是略显麻烦。
+从 W">
+<meta property="og:updated_time" content="2016-08-09T06:41:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="wordpress 缩略图功能函数 the_post_thumbnail">
+<meta name="twitter:description" content="很多 WordPress 主题，特别是那些杂志型的主题，会给每篇日志加上一张缩略图，这种展现方式一般用在首页，可能单独出现，或者和日志摘要一起。但是目前位置没有一个标准的方法去实现日志缩略图，很多主题是使用 WordPress 自定义字段来实现日志缩略图功能，这样的设置比较复杂，虽然我在制作的很多 WordPress 项目中都是用这个方法，并且设置了直接上传缩略图的方法，但是还是略显麻烦。
+从 W">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://diyxiaoshitou.github.io/2016/08/09/缩略图/"/>
+
+  <title> wordpress 缩略图功能函数 the_post_thumbnail | 没有比人更高的山，没有比脚更远的路 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">没有比人更高的山，没有比脚更远的路</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Good good study day day up</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                wordpress 缩略图功能函数 the_post_thumbnail
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-09T14:33:34+08:00" content="2016-08-09">
+              2016-08-09
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>很多 WordPress 主题，特别是那些杂志型的主题，会给每篇日志加上一张缩略图，这种展现方式一般用在首页，可能单独出现，或者和日志摘要一起。但是目前位置没有一个标准的方法去实现日志缩略图，很多主题是使用 WordPress 自定义字段来实现日志缩略图功能，这样的设置比较复杂，虽然我在制作的很多 WordPress 项目中都是用这个方法，并且设置了直接上传缩略图的方法，但是还是略显麻烦。</p>
+<p>从 WordPress 2.9 开始，WordPress 开始内置了日志缩略图的功能，并且提供了详细的接口让主题的作者设置和调用日志的缩略图。</p>
+<p>第一步：让主题支持缩略图功能<br>首先确保你的wordpress版本在2.9之上，然后在你的当前主题文件夹中找到并编辑functions.php文件，加入下面这句代码<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> ( function_exists( <span class="string">'add_theme_support'</span> ) )  </span><br><span class="line">    add_theme_support( <span class="string">'post-thumbnails'</span> );</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>(注：主题文件夹都保存在wp-content/themes/目录下)</p>
+<p>第二步：使用缩略图<br>在需要显示缩略图的地方调用the_post_thumbnail函数，比如你想在首页为每篇文章显示缩略图，可以在index.php文件中加入下面这样的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?</span><br><span class="line"> php if ( function_exists( &apos;the_post_thumbnail&apos; ) )  </span><br><span class="line">          the_post_thumbnail( &apos;thumbnail&apos; );</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>这样就能显示缩略图了，其中参数”thumbnail”表示缩略图显示的大小。wordpress预置了4种大小，你可以使用下面的4个参数来替换’thumbnail’，当然不同的台数显示的图片大小也不同</p>
+<p>Ø Thumbnail (缩略图尺寸)</p>
+<p>Ø Medium （中等尺寸）</p>
+<p>Ø Large （大尺寸）</p>
+<p>Ø Full （原始尺寸）</p>
+<p>具体尺寸大小可以在后台“设置”中的“媒体”选项中进行设置</p>
+<p>你可以设置3种不同的大小，以方便在不同的情况下使用。</p>
+<p>至此你的主题已经支持缩略图功能并可以灵活使用了。</p>
+<p>下面我将介绍一下更高级的应用技巧。</p>
+<p>自定义缩略图尺寸的三种方法<br>方法一：后台设置<br>就是上面提到的方法，不过这种方法只设置3种大小。</p>
+<p>方法二：自定义<br>在调用the_post_thumbnail函数的时候，可以直接指定缩略图的大小<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(array(200,200)); // 显示200X200尺寸的缩略图</span><br></pre></td></tr></table></figure></p>
+<p>这种方法的优点的灵活，可以随时通过代码的调用显示不同尺寸的图片，缺点是修改有点麻烦，如果你有多处这样的代码，修改起来就要把每一处代码都要修改掉。</p>
+<p>方法三：增加预置尺寸<br>通过前面的介绍我们已经知道，wordpress为我们预置了三种可以设置的尺寸。可不可以再增加一些预置的尺寸呢？当然可以，我们要用到的函数是add_image_size。比如我们想在首页和分类页面使用不同的缩略图大小，就可以先预置homepage-thumb和category-thumb这两大小。方法是在functions.php文件中加入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if ( function_exists( &apos;add_image_size&apos; ) )&#123;  </span><br><span class="line">    add_image_size( &apos;category-thumb&apos;, 200, 200 ); // 预置一个名为’category-thumb’,200*200的缩略图大小  </span><br><span class="line">    add_image_size( &apos;homepage-thumb&apos;, 220, 180); //预置一个名为’homepage-thumb’,220*180的缩略图大小  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之后就可以在首页调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘homepage-thumb’);</span><br></pre></td></tr></table></figure></p>
+<p>显示220*180的缩略图</p>
+<p>在分类页面调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘category-thumb’);</span><br></pre></td></tr></table></figure></p>
+<p>则显示200*200的缩略图。</p>
+<p>定义缩略图的样式<br>首先我们先来看一下the_post_thumbnail函数输出的html是什么样的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;http://domety.com/wp-content/uploads/2010/10/screenshot-150x150.png&quot;</span><br><span class="line">class=&quot;attachment-thumbnail wp-post-image&quot; alt=&quot;&quot; title=&quot;screenshot&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>由此可以看出，我们可以用css定义类attachment-thumbnail的样式就可以了。</p>
+<p>但是如果我想分别为首页和分类页面定义不同的样式，该怎么做呢？</p>
+<p>方法一是增加一个div，针对不同的div定义不同的样式，在此不多做介绍。</p>
+<p>我要介绍的是另一种方法：给缩略图添加属性</p>
+<p>你可以测试一下，如果把the_post_thumbnail(“thumbnail”)修改为下面这样的代码，看看输出的html结果是什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘thumbnail’,array(‘class’ =&gt; ‘homepage-thumb’));</span><br></pre></td></tr></table></figure>
+<p>我这边输出的html为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;http://domety.com/wp-content/uploads/2010/10/screenshot-150x150.png&quot;</span><br><span class="line">class=&quot;homepage-thumb wp-post-image&quot; alt=&quot;&quot; title=&quot;screenshot&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>可以和之前的html对比一下，不难发现class属性变成了我们设置的’homepage-thumb’。可以通过这种方法，把首页缩略图和分类页面的缩略图设置为不同的class属性。</p>
+<p>改变THE_POST_THUMBNAIL的HTML输出<br>我们可以使用filter来改变缩略图的html输出结果，下面的这段代码为缩略图加了一个文章链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">add_filter( &apos;post_thumbnail_html&apos;, &apos;my_post_image_html&apos;, 10, 3 );  </span><br><span class="line">function my_post_image_html( $html, $post_id, $post_image_id ) &#123;  </span><br><span class="line">    $html = &apos;&lt;a href=&quot;&apos; . get_permalink( $post_id ) . &apos;&quot; title=&quot;&apos; . esc_attr( get_post_field( &apos;post_title&apos;, $post_id ) ) . &apos;&quot;&gt;&apos; . $html . &apos;&lt;/a&gt;&apos;;  </span><br><span class="line">    return $html;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当你点击缩略图的时候就会跳转到相应的文章内页。</p>
+<p>检测文章是否有缩略图<br>一个良好的习惯就是在调用the_post_thumbnail函数之前，先检测一下该文章有没有设置缩略图，检测的方法是调用has_post_thumbnail函数，代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php if ( has_post_thumbnail() )  </span><br><span class="line">    the_post_thumbnail( &apos;thumbnail&apos; );?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>结合本站之前的提取文章内图片做为缩略图的方法，现在可以合二为一：首先判断文章有没有设置缩略图，如果有就直接显示，如果没有再提取文章内的图片为缩略图。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/*  </span><br><span class="line"></span><br><span class="line">* 缩略图</span><br><span class="line"></span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">function dm_the_thumbnail() &#123;  </span><br><span class="line"></span><br><span class="line">    global $post;  </span><br><span class="line"></span><br><span class="line">    // 判断该文章是否设置的缩略图，如果有则直接显示  </span><br><span class="line"></span><br><span class="line">    if ( has_post_thumbnail() ) &#123;  </span><br><span class="line"></span><br><span class="line">        echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        the_post_thumbnail(&apos;thumbnail&apos;);  </span><br><span class="line"></span><br><span class="line">        echo &apos;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">    &#125; else &#123; //如果文章没有设置缩略图，则查找文章内是否包含图片  </span><br><span class="line"></span><br><span class="line">        $content = $post-&gt;post_content;  </span><br><span class="line"></span><br><span class="line">        preg_match_all(&apos;/&lt;img.*?(?: |\\t|\\r|\\n)?src=[\&apos;&quot;]?(.+?)[\&apos;&quot;]?(?:(?: |\\t|\\r|\\n)+.*?)?&gt;/sim&apos;, $content, $strResult, PREG_PATTERN_ORDER);  </span><br><span class="line"></span><br><span class="line">        $n = count($strResult[1]);  </span><br><span class="line"></span><br><span class="line">        if($n &gt; 0)&#123; // 如果文章内包含有图片，就用第一张图片做为缩略图  </span><br><span class="line"></span><br><span class="line">            echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&lt;img src=&quot;&apos;.$strResult[1][0].&apos;&quot; alt=&quot;缩略图&quot; /&gt;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        &#125;else &#123; // 如果文章内没有图片，则用默认的图片。  </span><br><span class="line"></span><br><span class="line">            echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&lt;img src=&quot;&apos;.get_bloginfo(&apos;template_url&apos;).&apos;/imgs/default_thumbnail.jpg&quot; alt=&quot;缩略图&quot; /&gt;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        &#125;  </span><br><span class="line"></span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有兴趣的朋友可以把以上代码复制到functions.php文件中，然后调用dm_the_thumbnail()即可。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/08/获取wordpress内容/" rel="next" title="获取wordpress内容">
+                <i class="fa fa-chevron-left"></i> 获取wordpress内容
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="diyxiaoshitou" />
+          <p class="site-author-name" itemprop="name">diyxiaoshitou</p>
+          <p class="site-description motion-element" itemprop="description">专注于技术分享</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/diyxiaoshitou" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">diyxiaoshitou</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
