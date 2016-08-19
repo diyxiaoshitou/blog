@@ -291,6 +291,101 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/12/wordpress-logo/" itemprop="url">
+                  wordpress_logo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-12T21:13:48+08:00" content="2016-08-12">
+              2016-08-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//添加logo  function.php 设置</span><br><span class="line">add_theme_support( <span class="string">'custom-header'</span>, array(</span><br><span class="line">    <span class="string">'default-image'</span>          =&gt; <span class="string">''</span>,</span><br><span class="line">    <span class="string">'random-default'</span>         =&gt; <span class="literal">false</span>,</span><br><span class="line">    <span class="string">'width'</span>                  =&gt; 133,</span><br><span class="line">    <span class="string">'height'</span>                 =&gt; 33,</span><br><span class="line">    <span class="string">'flex-height'</span>            =&gt; <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'flex-width'</span>             =&gt; <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'default-text-color'</span>     =&gt; <span class="string">''</span>,</span><br><span class="line">    <span class="string">'header-text'</span>            =&gt; <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'uploads'</span>                =&gt; <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'wp-head-callback'</span>       =&gt; <span class="string">''</span>,</span><br><span class="line">    <span class="string">'admin-head-callback'</span>    =&gt; <span class="string">''</span>,</span><br><span class="line">    <span class="string">'admin-preview-callback'</span> =&gt; <span class="string">''</span>,</span><br><span class="line">) );</span><br></pre></td></tr></table></figure>
+<p>logo调用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- logo --&gt;</span><br><span class="line">  &lt;?php <span class="keyword">if</span> (get_header_image()) : ?&gt;</span><br><span class="line">      &lt;a href=<span class="string">"&lt;?php echo get_option('home') ?&gt;"</span>&gt;</span><br><span class="line">          &lt;img src=<span class="string">"&lt;?php header_image(); ?&gt;"</span> height=<span class="string">"&lt;?php echo get_custom_header()-&gt;height; ?&gt;"</span></span><br><span class="line">               width=<span class="string">"&lt;?php echo get_custom_header()-&gt;width; ?&gt;"</span> alt=<span class="string">"&lt;?php bloginfo('name');?&gt;"</span>&gt;</span><br><span class="line">      &lt;/a&gt;</span><br><span class="line">  &lt;?php endif; ?&gt;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/09/缩略图/" itemprop="url">
                   wordpress 缩略图功能函数 the_post_thumbnail
                 </a>
@@ -520,7 +615,7 @@
               
                 
                 <a class="post-title-link" href="/2016/08/04/sublime快捷键/" itemprop="url">
-                  sublime快捷键
+                  mac sublime3快捷键
                 </a>
               
             
@@ -563,7 +658,7 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">⌘ + shift + k  //编辑标签</span><br><span class="line">control + shift + k  //删除行</span><br><span class="line">⌘ + shift + d  //复制行</span><br></pre></td></tr></table></figure>
+            <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">⌘ + shift + k  <span class="comment">//编辑标签</span></span><br><span class="line">control + shift + k  <span class="comment">//删除行</span></span><br><span class="line">⌘ + shift + d  <span class="comment">//复制行</span></span><br><span class="line">shift + alt  <span class="comment">//选择单词</span></span><br></pre></td></tr></table></figure>
 
           
         
@@ -755,12 +850,18 @@
         
           
             <hr>
-<h2 id="阅读设置"><a href="#阅读设置" class="headerlink" title="阅读设置"></a>阅读设置</h2><p><strong>首页显示</strong><br>您的最新文章（index.php）<br><strong>一个静态页面（在下方选择）</strong><br>主页：page.php(默认)  如果有<code>front-page.php</code>会优先调用显示</p>
+<h2 id="阅读设置"><a href="#阅读设置" class="headerlink" title="阅读设置"></a>阅读设置</h2><p><strong>首页显示</strong><br>您的最新文章（index.php）相当于文章列表页<br><strong>一个静态页面（在下方选择）</strong> (如果选择这个)<br><code>主页：</code> page.php(默认)  如果有<code>front-page.php</code>会优先调用显示<br><code>文章页：</code> 相当于文章列表页</p>
 <blockquote>
 <p>front-page  首页<br>    index.php   //（默认首页）新闻列表<br>    page  //单页面<br>    single.php // 文章页<br>    sidebar.php //侧边栏</p>
 </blockquote>
 <h2 id="页面规划"><a href="#页面规划" class="headerlink" title="页面规划"></a>页面规划</h2><p>所有的标题的<code>导航|子导航</code>，应该用 <strong>分类，和单页面</strong><br>里边的内容，应该用 <strong>新闻列表，帖子列表</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloginfo(<span class="string">'template_url'</span>)  //目录根路径</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">bloginfo(<span class="string">'template_url'</span>)  //模板根目录</span><br><span class="line">home_url() //获取根路径 需要输出</span><br><span class="line">get_option(<span class="string">'home'</span>)  //获取根路径 需要输出</span><br><span class="line">get_post_meta(get_the_ID(), <span class="string">'jianjie'</span>, <span class="literal">true</span>) //获取自定义字段为“jianjie”的内容 需要输出</span><br><span class="line">the_permalink()  //获取连接</span><br><span class="line">the_title()  //获取标题</span><br><span class="line">the_post_thumbnail(<span class="string">'full'</span>)  //获取缩略图</span><br><span class="line">the_time(<span class="string">'l, F jS, Y'</span>)  //获取时间</span><br><span class="line">the_content()  //获取内容</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wp_list_pages(<span class="string">'title_li=&lt;h4&gt;'</span>.__(<span class="string">'关于我们'</span>).<span class="string">'&lt;/h4&gt;&amp;child_of=149&amp;sort_column=post_date'</span>) //获取页面的列表</span><br><span class="line">wp_nav_menu(<span class="string">'theme_location=footer-menu-support'</span>) //获取菜单</span><br></pre></td></tr></table></figure>
+<p>查询</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">query_posts(<span class="string">"showposts=5&amp;cat=13"</span>); <span class="comment">//查询</span></span><br><span class="line"></span><br><span class="line">$query_scroll = <span class="keyword">new</span> WP_Query(<span class="string">"showposts=5&amp;cat=13"</span>); <span class="comment">//查询建议用这个</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">if</span> ($query_scroll-&gt;have_posts()): <span class="keyword">while</span> ($query_scroll-&gt;have_posts()): $query_scroll-&gt;the_post(); <span class="meta">?&gt;</span></span><br><span class="line">    <span class="meta">&lt;?php</span> the_post_thumbnail(<span class="string">'full'</span>) <span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">endwhile</span>; <span class="keyword">endif</span>; <span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">wp_reset_query();<span class="comment">// 重置查询</span></span><br><span class="line"></span><br><span class="line">apply_filters(<span class="string">'the_content'</span>,$post-&gt;post_content)  <span class="comment">//单独获取内容</span></span><br></pre></td></tr></table></figure>
+<p>调用样式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"&lt;?php bloginfo('stylesheet_url')?&gt;"</span>&gt; //调用样式</span><br></pre></td></tr></table></figure></p>
+<p>默认添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wp_enqueue_script(<span class="string">"jquery"</span>)  //必须在下面的前面</span><br><span class="line">wp_head()</span><br><span class="line">wp_footer()</span><br></pre></td></tr></table></figure></p>
+<p>调用模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">get_template_part(&apos;single-product&apos;) //调用模板</span><br><span class="line">comments_template() //调用默认的评论模板</span><br><span class="line">get_sidebar() //引用侧栏</span><br></pre></td></tr></table></figure></p>
+<p>判断<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">in_category(array(18,20,21))  //在分类里</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -1173,105 +1274,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/14/wordpress-conf/" itemprop="url">
-                  wordpress_conf
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-14T01:15:37+08:00" content="2016-07-14">
-              2016-07-14
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<p>这个配置文件主要配置server_name和root</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">   listen       80;</span><br><span class="line">   server_name  wordpress.app;</span><br><span class="line">   root   /Users/diyxiaoshitou/wordpress;</span><br><span class="line">   index  index.html index.htm index.php;</span><br><span class="line"></span><br><span class="line">   <span class="comment">#charset koi8-r;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#   access_log  logs/access.log;</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">#error_page  404              /404.html;</span></span><br><span class="line"></span><br><span class="line">   <span class="comment"># redirect server error pages to the static page /50x.html</span></span><br><span class="line">   <span class="comment">#</span></span><br><span class="line">   error_page   500 502 503 504  /50x.html;</span><br><span class="line">   location = /50x.html &#123;</span><br><span class="line">       root   html;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment"># proxy the PHP scripts to Apache listening on 127.0.0.1:80</span></span><br><span class="line">   <span class="comment">#</span></span><br><span class="line">   <span class="comment">#location ~ \.php$ &#123;</span></span><br><span class="line">   <span class="comment">#    proxy_pass   http://127.0.0.1;</span></span><br><span class="line">   <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">   location ~ /\. &#123;</span><br><span class="line">           deny all;</span><br><span class="line">           access_<span class="built_in">log</span> off;</span><br><span class="line">           <span class="built_in">log</span>_not_found off;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span></span><br><span class="line">   <span class="comment">#</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   location ~ \.php$ &#123;</span><br><span class="line">       fastcgi_buffers 2 256k;</span><br><span class="line">       fastcgi_buffer_size 128K;</span><br><span class="line">       fastcgi_busy_buffers_size 256K;</span><br><span class="line">       fastcgi_temp_file_write_size 256k;</span><br><span class="line">       fastcgi_connect_timeout 3000;</span><br><span class="line">       fastcgi_send_timeout 3000;</span><br><span class="line">       fastcgi_<span class="built_in">read</span>_timeout 3000;</span><br><span class="line">       fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">       fastcgi_index  index.php;</span><br><span class="line">       <span class="comment">#fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">       fastcgi_param  SCRIPT_FILENAME  <span class="variable">$document_root</span><span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">       include        fastcgi_params;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   <span class="comment"># deny access to .htaccess files, if Apache's document root</span></span><br><span class="line">   <span class="comment"># concurs with nginx's one</span></span><br><span class="line">   <span class="comment">#</span></span><br><span class="line">   location ~ /\.ht &#123;</span><br><span class="line">       deny  all;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   location ~ /\.git &#123;</span><br><span class="line">       deny  all;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1310,7 +1319,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
