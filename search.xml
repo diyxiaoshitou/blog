@@ -68,7 +68,7 @@
     <entry>
       <title><![CDATA[mac sublime3快捷键]]></title>
       <url>http://diyxiaoshitou.github.io/2016/08/04/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-      <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">⌘ + shift + k  <span class="comment">//编辑标签</span></span><br><span class="line">control + shift + k  <span class="comment">//删除行</span></span><br><span class="line">⌘ + shift + d  <span class="comment">//复制行</span></span><br><span class="line">shift + alt  <span class="comment">//选择单词</span></span><br></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">⌘ + <span class="built_in">shift</span> + k  //编辑成对的元素标签</span><br><span class="line">control + <span class="built_in">shift</span> + k  //删除行</span><br><span class="line">⌘ + <span class="built_in">shift</span> + d  //复制行</span><br><span class="line"><span class="built_in">shift</span> + alt  //选择单词</span><br><span class="line">⌘+k ⌘+l  //转换成小写</span><br><span class="line">⌘+k ⌘+u  //转换成大写</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
