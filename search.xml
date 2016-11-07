@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[从一行代码里面学点JavaScript]]></title>
       <url>http://diyxiaoshitou.github.io/2016/11/02/%E4%BB%8E%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E9%87%8C%E9%9D%A2%E5%AD%A6%E7%82%B9JavaScript/</url>
-      <content type="html"><![CDATA[<h1 id="从一行代码里面学点JavaScript"><a href="#从一行代码里面学点JavaScript" class="headerlink" title="从一行代码里面学点JavaScript"></a>从一行代码里面学点JavaScript</h1><p>现如今，JavaScript无处不在，因此关于JavaScript的新知识也是层出不穷。JavaScript的特点在于，要学习它的语法入门简简单，但是要精通使用它的方式却是一件不容易的事。</p>
+      <content type="html"><![CDATA[<p>现如今，JavaScript无处不在，因此关于JavaScript的新知识也是层出不穷。JavaScript的特点在于，要学习它的语法入门简简单，但是要精通使用它的方式却是一件不容易的事。</p>
 <p>来看看下面的这段代码，它来自于谷歌“名猿”Addy Osmani在几天前贴出的一段代码，它的作用是用来调试你的CSS层。全部代码只有三行，但是你绝对可以把它放在一行里面完成：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[].forEach.call($$(<span class="string">"*"</span>),<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">  a.style.outline=<span class="string">"1px solid #"</span>+(~~(<span class="built_in">Math</span>.random()*(<span class="number">1</span>&lt;&lt;<span class="number">24</span>))).toString(<span class="number">16</span>)&#125;)</span><br></pre></td></tr></table></figure>
 <p>现在，在你的Chrome浏览器的控制台中输入这段代码，你会发现不同HTML层都被使用不同的颜色添加了一个高亮的边框。是不是非常酷？但是，简单来说，这段代码只是首先获取了所有的页面元素，然后使用一个不同的颜色为它们添加了一个1ps的边框。想法很简单，但是真要实现起来却不是那么容易的一件事。在下面的内容中，我们将一起一步一步学习如何理解上面的这段代码。</p>
