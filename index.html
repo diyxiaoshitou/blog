@@ -3,8 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>没有比人更高的山，没有比脚更远的路</title>
+  
+  
+  <title>没有比人更高的山，没有比脚更远的路 | Good good study day day up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="undefined">
   <meta name="description" content="专注于技术分享">
 <meta property="og:type" content="website">
 <meta property="og:title" content="没有比人更高的山，没有比脚更远的路">
@@ -15,639 +22,692 @@
 <meta name="twitter:title" content="没有比人更高的山，没有比脚更远的路">
 <meta name="twitter:description" content="专注于技术分享">
   
-    <link rel="alternate" href="/atom.xml" title="没有比人更高的山，没有比脚更远的路" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="没有比人更高的山，没有比脚更远的路" type="application/atom+xml">
   
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-
+  <meta name="summary" content="专注于技术分享">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">没有比人更高的山，没有比脚更远的路</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">Good good study day day up</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">首页</a>
-        
-          <a class="main-nav-link" href="/archives">归档</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://diyxiaoshitou.github.io"></form>
+  <div id="loading" class="active"></div>
+
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="//placekitten.com/200/200"></a>
+        <hgroup class="introduce">
+          <h5 class="nickname">diyxiaoshitou</h5>
+          <a href="mailto:2535477634@qq.com" title="2535477634@qq.com" class="mail">2535477634@qq.com</a>
+        </hgroup>
       </div>
     </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-从一行代码里面学点JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/02/从一行代码里面学点JavaScript/" class="article-date">
-  <time datetime="2016-11-02T09:40:03.000Z" itemprop="datePublished">2016-11-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/02/从一行代码里面学点JavaScript/">从一行代码里面学点JavaScript</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>现如今，JavaScript无处不在，因此关于JavaScript的新知识也是层出不穷。JavaScript的特点在于，要学习它的语法入门简简单，但是要精通使用它的方式却是一件不容易的事。</p>
-<p>来看看下面的这段代码，它来自于谷歌“名猿”Addy Osmani在几天前贴出的一段代码，它的作用是用来调试你的CSS层。全部代码只有三行，但是你绝对可以把它放在一行里面完成：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[].forEach.call($$(<span class="string">"*"</span>),<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">  a.style.outline=<span class="string">"1px solid #"</span>+(~~(<span class="built_in">Math</span>.random()*(<span class="number">1</span>&lt;&lt;<span class="number">24</span>))).toString(<span class="number">16</span>)&#125;)</span><br></pre></td></tr></table></figure>
-<p>现在，在你的Chrome浏览器的控制台中输入这段代码，你会发现不同HTML层都被使用不同的颜色添加了一个高亮的边框。是不是非常酷？但是，简单来说，这段代码只是首先获取了所有的页面元素，然后使用一个不同的颜色为它们添加了一个1ps的边框。想法很简单，但是真要实现起来却不是那么容易的一件事。在下面的内容中，我们将一起一步一步学习如何理解上面的这段代码。</p>
-<h2 id="选择页面中所有的元素"><a href="#选择页面中所有的元素" class="headerlink" title="选择页面中所有的元素"></a>选择页面中所有的元素</h2><p>我们需要做的第一件事情是获取页面中所有的元素，在上面的代码中，Addy使用了一个Chrome浏览器中特有的函数$$。你可以在你的Chrome浏览器控制台中输入$$(‘a’)，然后你就能得到一个当前页面中所有锚元素的列表。</p>
-<p>$$函数是许多现代浏览器命令行API中的一个部分，它等价于document.querySelectorAll,你可以将一个CSS选择器作为这个函数的参数，然后你就能够获得当前页面中所有匹配这个CSS选择器的元素列表。如果你在浏览器控制台以外的地方，你可以使用document.querySelectorAll(‘<em>‘)来代替$$(‘</em>‘)。更多关于$$函数的详细内容可以查看Chrome开发者工具的文档。</p>
-<p>当然，除了使用$$函数之外，我们还有一种更简单的方法，document.all，虽然这并不是一种很规范的使用方法，但是它几乎在每一个浏览器中都能运行成功。</p>
-<h2 id="迭代所有的元素"><a href="#迭代所有的元素" class="headerlink" title="迭代所有的元素"></a>迭代所有的元素</h2><p>经过第一步，我们已经获得了页面内所有的元素，现在我们想做的事情是遍历每一个元素，然后为它们添加一个彩色边边框。但是上面的代码究竟是怎么一回事呢？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[].forEach.call( $$(<span class="string">'*'</span>), <span class="function"><span class="keyword">function</span>(<span class="params"> element </span>) </span>&#123; <span class="comment">/* 在这里修改颜色 */</span> &#125;);</span><br></pre></td></tr></table></figure></p>
-<p>首先，我们通过选择器获得的列表是一个NodeLists对象，它和JavaScript中的数组有点像，你可以使用方括号来获取其中的节点，你也可以检查它其中包含多少个元素，但是它并没有实现数组包含的所有方法，因此我们并不能使用$$(‘*’).forEach()来进行迭代。在JavaScript中，有好几个类似于数组但是并不是数组的对象，除了前面的NodeLists，还有函数的参数集合arguments，在这里我们可以使用call或apply函数将函数的方法运用到这些对象上。例如下面的例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line"> <span class="built_in">console</span>.log( <span class="keyword">this</span> + <span class="string">' '</span> + name );&#125;say.call( <span class="string">'hola'</span>, <span class="string">'Mike'</span> ); <span class="comment">// 打印 'hola Mike'</span></span><br><span class="line"><span class="comment">// 你也可以将这种方法有用在arguments对象上 function example( arg1, arg2, arg3 ) &#123; return Array.prototype.slice.call(arguments, 1); // Returns [arg2, arg3] &#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>在Addy的代码中，使用了[].forEach.call而不是Array.prototype.forEach.call，二者等价，但是前者可以节省几个字节。</p>
-<h2 id="为元素添加颜色"><a href="#为元素添加颜色" class="headerlink" title="为元素添加颜色"></a>为元素添加颜色</h2><p>为了让元素都有一个漂亮的边框，我们在上面的代码中使用了CSS属性outline。outline属性位于CSS盒模型之外，因此它并不影响元素的属性或者元素在布局中的位置，这对于我们来说非常有用。这个属性和修改border属性非常类似，因此下面的代码应该不会很难理解：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.style.outline=<span class="string">"1px solid #"</span> + color</span><br></pre></td></tr></table></figure></p>
-<p>真正有趣的地方在于定义颜色部分：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~(<span class="built_in">Math</span>.random()*(<span class="number">1</span>&lt;&lt;<span class="number">24</span>))).toString(<span class="number">16</span>)</span><br></pre></td></tr></table></figure></p>
-<p>天呐，上面的代码是什么意思？在JavaScript中，比特操作符并不是经常被使用，因此这里可能会让很多程序员感到很疑惑。</p>
-<p>我们想达到的目的是活的一个十六进制格式的颜色例如白色对应的是FFFFFF，蓝色对应的是0000FF，或者随便一个颜色37f9ac。虽然我们人类喜欢十进制，但是我们的代码常常会需要十六进制的东西。</p>
-<p>我们首先要学会如何使用toString函数将一个十进制的数组转换为一个十六进制整数。这个函数可以接受一个参数，如果参数缺省，默认为十进制，但是你完全可以使用别的数组：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">30</span>).toString(); <span class="comment">// "30"(30).toString(10); // "30"(30).toString(16); // "1e" 十六进制(30).toString(2); // "11110" 二进制(30).toString(36); // "u" 36是允许的最大参数值</span></span><br></pre></td></tr></table></figure></p>
-<p>除此之外，你可以使用parseInt函数将十六进制数字转换为十进制。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">"30"</span>); <span class="comment">// "30"parseInt("30", 10); // "30"parseInt("1e", 16); // "30"parseInt("11110", 2); // "30"parseInt("u", 36); // "30"</span></span><br></pre></td></tr></table></figure></p>
-<p>因此，我们现在只需要一个位于0和ffffff之间的十六进制数，由于:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">"ffffff"</span>, <span class="number">16</span>) == <span class="number">16777215</span></span><br></pre></td></tr></table></figure></p>
-<p>而这里的16777215实际上是2^24-1。</p>
-<p>如果你对二进制数学熟悉的话，你可能会知道1&lt;&lt;24 == 16777216。</p>
-<p>再进一步，你每在1后面添加一个0，你就相当于多做了一次2的乘方：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="comment">// 1 == 2^0100 // 4 == 2^210000 // 16 == 2^41000000000000000000000000 // 16777216 == 2^24</span></span><br></pre></td></tr></table></figure></p>
-<p>因此，在这里我们可以知道Math.random()*(1&lt;&lt;24)表示一个位于0和16777216之间的数。</p>
-<p>但是这里并没有结束，因为Math.random返回的是一个浮点数，但是我们只想要整数部分。我们的代码中使用波浪号操作符来完成这件事。波浪操作符在JavaScript中被用来对一个变量进行取反。</p>
-<p>但是我们在这里并不关心取反，我们指向获取整数部分。因此我们还可以知道两次取反可以去掉一个浮点数的小数部分，因此~~的作用相当于parseInt：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">12.34</span>, <span class="comment">// ~~a = 12    b = -1231.8754, // ~~b = -1231    c = 3213.000001 // ~~c = 3213;~~a == parseInt(a, 10); // true~~b == parseInt(b, 10); // true~~c == parseInt(c, 10); // true</span></span><br></pre></td></tr></table></figure></p>
-<p>当然，我们还有一种更加简洁的方法，使用OR操作符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~a == 0|a == parseInt(a, 10)~~b == 0|b == parseInt(b, 10)~~c == 0|c == parseInt(c, 10)</span><br></pre></td></tr></table></figure></p>
-<p>最终，我们获得了一个位于0和16777216之间的随机整数，也就是我们想要的随机颜色。此时我们只需要使用toString(16)将它转化为十六进制数即可。</p>
-<p>总结</p>
-<p>现在，你已经完全理解了前面的这一行代码中的各个部分。作为一个程序员，我们应该在完成工作之后多问自己几遍为什么，还有没有更好更简洁的方法。当然，最应该做的事情当然是多阅读程序代码，也许你就能从某一行代码中学到很多新东西。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/11/02/从一行代码里面学点JavaScript/" data-id="civ8f5oi200099pauxi5ydb2f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-试题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/02/试题/" class="article-date">
-  <time datetime="2016-11-02T06:50:37.000Z" itemprop="datePublished">2016-11-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/02/试题/">试题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="写一个通用的事件侦听器函数"><a href="#写一个通用的事件侦听器函数" class="headerlink" title="写一个通用的事件侦听器函数"></a>写一个通用的事件侦听器函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;!-- 通用的侦听函数 --&gt;</span></span><br><span class="line">   markyun = &#123;&#125;</span><br><span class="line">   markyun.Event = &#123;</span><br><span class="line">       readyEvent: <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">if</span> (fn == <span class="literal">null</span>) &#123;</span><br><span class="line">               fn = <span class="built_in">document</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">var</span> oldonload = <span class="built_in">window</span>.onload;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">window</span>.onload != <span class="string">'function'</span>) &#123;</span><br><span class="line">               <span class="built_in">window</span>.onload = fn;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                   oldonload();</span><br><span class="line">                   fn()</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;,</span><br><span class="line"></span><br><span class="line">       addEvent: <span class="function"><span class="keyword">function</span>(<span class="params">element, type, handler</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">if</span> (element.addEventListener) &#123;</span><br><span class="line">               element.addEventListener(type, handler, <span class="literal">false</span>);</span><br><span class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent) &#123;</span><br><span class="line">               element.attachEvent(<span class="string">'on'</span> + type, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                   handler.call(element);</span><br><span class="line">               &#125;);</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               element[<span class="string">'on'</span> + type] = handler;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;,</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 移除事件</span></span><br><span class="line">       removeEvent: <span class="function"><span class="keyword">function</span>(<span class="params">element, type, handler</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">if</span> (element.removeEventListener) &#123;</span><br><span class="line">               element.removeEventListener(type, handler, <span class="literal">false</span>);</span><br><span class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.datachEvent) &#123;</span><br><span class="line">               element.datachEvent(<span class="string">'on'</span> + type, handler);</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               element[<span class="string">'on'</span> + type] = <span class="literal">null</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;,</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 阻止事件（主要是时间冒泡，因为ie不支持事件捕获）</span></span><br><span class="line">       stopPropagation: <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">if</span> (ev.stopPropagation) &#123;</span><br><span class="line">               ev.stopPropagation();</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               ev.cancelBubble = <span class="literal">true</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;,</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 取消事件默认行为</span></span><br><span class="line">       preventDefault: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">if</span> (event.preventDefault) &#123;</span><br><span class="line">               event.preventDefault();</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               event.returnValue = <span class="literal">false</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;,</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 获取事件目标</span></span><br><span class="line">       getTarget: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">return</span> event.target || event.srcElement;</span><br><span class="line">       &#125;,</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 获取对象的引用，渠道时间的所有信息，确保随时使用event;</span></span><br><span class="line">       getEvent: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">var</span> ev = e || <span class="built_in">window</span>.event;</span><br><span class="line">           <span class="keyword">if</span> (!ev) &#123;</span><br><span class="line">               <span class="keyword">var</span> c = <span class="keyword">this</span>.getEvent.caller;</span><br><span class="line">               <span class="keyword">while</span> (c) &#123;</span><br><span class="line">                   ev = c.anguments[<span class="number">0</span>];</span><br><span class="line">                   <span class="keyword">if</span> (ev &amp;&amp; Event == ev.constructor) &#123;</span><br><span class="line">                       <span class="keyword">break</span>;</span><br><span class="line">                   &#125;</span><br><span class="line">                   c = c.caller;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">return</span> ev;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？"><a href="#Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？" class="headerlink" title="Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？"></a>Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hasOwnProperty</span><br><span class="line"></span><br><span class="line">javaScript中hasOwnProperty函数方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。此方法无法检查该对象的原型链中是否具有该属性；该属性必须是对象本身的一个成员。</span><br><span class="line">使用方法：</span><br><span class="line">object.hasOwnProperty(proName)</span><br><span class="line">其中参数object是必选项。一个对象的实例。</span><br><span class="line">proName是必选项。一个属性名称的字符串值。</span><br><span class="line"></span><br><span class="line">如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty函数方法返回 <span class="literal">true</span>，反之则返回 <span class="literal">false</span>。</span><br></pre></td></tr></table></figure>
-<h3 id="统计一个字符串出现最多的字母"><a href="#统计一个字符串出现最多的字母" class="headerlink" title="统计一个字符串出现最多的字母"></a>统计一个字符串出现最多的字母</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strs = <span class="string">"adadfdfseffserfefsefseeffffftsdg"</span>; <span class="comment">//命名一个变量放置给出的字符串</span></span><br><span class="line">    <span class="keyword">var</span> kk = getMaxStrLength(strs);</span><br><span class="line">    <span class="built_in">console</span>.log(kk);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getMaxStrLength</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> maxLength = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">var</span> result = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (str !== <span class="string">''</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> oldStr = str;</span><br><span class="line">            <span class="keyword">var</span> firstStr = str.substring(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">            str = str.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(firstStr, <span class="string">'g'</span>), <span class="string">''</span>);</span><br><span class="line">            <span class="keyword">if</span> (oldStr.length - str.length &gt; maxLength) &#123;</span><br><span class="line">                maxLength = oldStr.length - str.length;</span><br><span class="line">                result = firstStr + <span class="string">"="</span> + maxLength;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="随机生成指定长度的字符串"><a href="#随机生成指定长度的字符串" class="headerlink" title="随机生成指定长度的字符串"></a>随机生成指定长度的字符串</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randomString</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> str = <span class="string">'abcdefghijklmnopqrstuvwxyz9876543210'</span>;</span><br><span class="line">        <span class="keyword">var</span> tmp = <span class="string">''</span>,</span><br><span class="line">            i = <span class="number">0</span>,</span><br><span class="line">            l = str.length;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">                tmp += str.charAt(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*l));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(randomString(<span class="number">8</span>));</span><br></pre></td></tr></table></figure>
-<h3 id="sort-方法：简单粗暴"><a href="#sort-方法：简单粗暴" class="headerlink" title="sort()方法：简单粗暴"></a>sort()方法：简单粗暴</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">9</span>, <span class="number">4</span>, <span class="number">50</span>, <span class="number">49</span>, <span class="number">6</span>, <span class="number">3</span>, <span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.sort(sortNumber);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortNumber</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a - b;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
-<h3 id="笔者常用的数组去重方法："><a href="#笔者常用的数组去重方法：" class="headerlink" title="笔者常用的数组去重方法："></a>笔者常用的数组去重方法：</h3><p>方法一<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> array.indexOf(item) === index;</span><br><span class="line">    <span class="comment">//或者这样写return array.indexOf(item, index+1) === -1; 如果没有重复项，返回true</span></span><br><span class="line">    <span class="comment">//用filter方法，返回ietm对应的indexOf索引值与本身index索引值相等的值，也就是去掉重复的值，filter本身不修改数组，只是会自动遍历数组，去掉重复值后，那么arr就剩下不重复的了</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">test();<span class="comment">//输出Array [ 1, 4, 50, 6, 2 ]</span></span><br></pre></td></tr></table></figure></p>
-<p>方法二<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr));</span><br><span class="line">&#125;</span><br><span class="line">unique(arr);</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/11/02/试题/" data-id="civ8f5oiv000u9paukyy42m51" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-wordpress-logo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/12/wordpress-logo/" class="article-date">
-  <time datetime="2016-08-12T13:13:48.000Z" itemprop="datePublished">2016-08-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/12/wordpress-logo/">wordpress_logo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//添加logo  function.php 设置</span><br><span class="line">add_theme_support( <span class="string">'custom-header'</span>, array(</span><br><span class="line">    <span class="string">'default-image'</span>          =&gt; <span class="string">''</span>,</span><br><span class="line">    <span class="string">'random-default'</span>         =&gt; <span class="literal">false</span>,</span><br><span class="line">    <span class="string">'width'</span>                  =&gt; 133,</span><br><span class="line">    <span class="string">'height'</span>                 =&gt; 33,</span><br><span class="line">    <span class="string">'flex-height'</span>            =&gt; <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'flex-width'</span>             =&gt; <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'default-text-color'</span>     =&gt; <span class="string">''</span>,</span><br><span class="line">    <span class="string">'header-text'</span>            =&gt; <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'uploads'</span>                =&gt; <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'wp-head-callback'</span>       =&gt; <span class="string">''</span>,</span><br><span class="line">    <span class="string">'admin-head-callback'</span>    =&gt; <span class="string">''</span>,</span><br><span class="line">    <span class="string">'admin-preview-callback'</span> =&gt; <span class="string">''</span>,</span><br><span class="line">) );</span><br></pre></td></tr></table></figure>
-<p>logo调用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- logo --&gt;</span><br><span class="line">  &lt;?php <span class="keyword">if</span> (get_header_image()) : ?&gt;</span><br><span class="line">      &lt;a href=<span class="string">"&lt;?php echo get_option('home') ?&gt;"</span>&gt;</span><br><span class="line">          &lt;img src=<span class="string">"&lt;?php header_image(); ?&gt;"</span> height=<span class="string">"&lt;?php echo get_custom_header()-&gt;height; ?&gt;"</span></span><br><span class="line">               width=<span class="string">"&lt;?php echo get_custom_header()-&gt;width; ?&gt;"</span> alt=<span class="string">"&lt;?php bloginfo('name');?&gt;"</span>&gt;</span><br><span class="line">      &lt;/a&gt;</span><br><span class="line">  &lt;?php endif; ?&gt;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/08/12/wordpress-logo/" data-id="civ8f5oi6000e9pauw38aol2k" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="wordpress-缩略图" class="article article-type-wordpress" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/09/缩略图/" class="article-date">
-  <time datetime="2016-08-09T06:33:34.000Z" itemprop="datePublished">2016-08-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/09/缩略图/">wordpress 缩略图功能函数 the_post_thumbnail</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>很多 WordPress 主题，特别是那些杂志型的主题，会给每篇日志加上一张缩略图，这种展现方式一般用在首页，可能单独出现，或者和日志摘要一起。但是目前位置没有一个标准的方法去实现日志缩略图，很多主题是使用 WordPress 自定义字段来实现日志缩略图功能，这样的设置比较复杂，虽然我在制作的很多 WordPress 项目中都是用这个方法，并且设置了直接上传缩略图的方法，但是还是略显麻烦。</p>
-<p>从 WordPress 2.9 开始，WordPress 开始内置了日志缩略图的功能，并且提供了详细的接口让主题的作者设置和调用日志的缩略图。</p>
-<p>第一步：让主题支持缩略图功能<br>首先确保你的wordpress版本在2.9之上，然后在你的当前主题文件夹中找到并编辑functions.php文件，加入下面这句代码<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> ( function_exists( <span class="string">'add_theme_support'</span> ) )  </span><br><span class="line">    add_theme_support( <span class="string">'post-thumbnails'</span> );</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>(注：主题文件夹都保存在wp-content/themes/目录下)</p>
-<p>第二步：使用缩略图<br>在需要显示缩略图的地方调用the_post_thumbnail函数，比如你想在首页为每篇文章显示缩略图，可以在index.php文件中加入下面这样的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?</span><br><span class="line"> php if ( function_exists( &apos;the_post_thumbnail&apos; ) )  </span><br><span class="line">          the_post_thumbnail( &apos;thumbnail&apos; );</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<p>这样就能显示缩略图了，其中参数”thumbnail”表示缩略图显示的大小。wordpress预置了4种大小，你可以使用下面的4个参数来替换’thumbnail’，当然不同的台数显示的图片大小也不同</p>
-<p>Ø Thumbnail (缩略图尺寸)</p>
-<p>Ø Medium （中等尺寸）</p>
-<p>Ø Large （大尺寸）</p>
-<p>Ø Full （原始尺寸）</p>
-<p>具体尺寸大小可以在后台“设置”中的“媒体”选项中进行设置</p>
-<p>你可以设置3种不同的大小，以方便在不同的情况下使用。</p>
-<p>至此你的主题已经支持缩略图功能并可以灵活使用了。</p>
-<p>下面我将介绍一下更高级的应用技巧。</p>
-<p>自定义缩略图尺寸的三种方法<br>方法一：后台设置<br>就是上面提到的方法，不过这种方法只设置3种大小。</p>
-<p>方法二：自定义<br>在调用the_post_thumbnail函数的时候，可以直接指定缩略图的大小<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(array(200,200)); // 显示200X200尺寸的缩略图</span><br></pre></td></tr></table></figure></p>
-<p>这种方法的优点的灵活，可以随时通过代码的调用显示不同尺寸的图片，缺点是修改有点麻烦，如果你有多处这样的代码，修改起来就要把每一处代码都要修改掉。</p>
-<p>方法三：增加预置尺寸<br>通过前面的介绍我们已经知道，wordpress为我们预置了三种可以设置的尺寸。可不可以再增加一些预置的尺寸呢？当然可以，我们要用到的函数是add_image_size。比如我们想在首页和分类页面使用不同的缩略图大小，就可以先预置homepage-thumb和category-thumb这两大小。方法是在functions.php文件中加入以下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if ( function_exists( &apos;add_image_size&apos; ) )&#123;  </span><br><span class="line">    add_image_size( &apos;category-thumb&apos;, 200, 200 ); // 预置一个名为’category-thumb’,200*200的缩略图大小  </span><br><span class="line">    add_image_size( &apos;homepage-thumb&apos;, 220, 180); //预置一个名为’homepage-thumb’,220*180的缩略图大小  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>之后就可以在首页调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘homepage-thumb’);</span><br></pre></td></tr></table></figure></p>
-<p>显示220*180的缩略图</p>
-<p>在分类页面调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘category-thumb’);</span><br></pre></td></tr></table></figure></p>
-<p>则显示200*200的缩略图。</p>
-<p>定义缩略图的样式<br>首先我们先来看一下the_post_thumbnail函数输出的html是什么样的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;http://domety.com/wp-content/uploads/2010/10/screenshot-150x150.png&quot;</span><br><span class="line">class=&quot;attachment-thumbnail wp-post-image&quot; alt=&quot;&quot; title=&quot;screenshot&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<p>由此可以看出，我们可以用css定义类attachment-thumbnail的样式就可以了。</p>
-<p>但是如果我想分别为首页和分类页面定义不同的样式，该怎么做呢？</p>
-<p>方法一是增加一个div，针对不同的div定义不同的样式，在此不多做介绍。</p>
-<p>我要介绍的是另一种方法：给缩略图添加属性</p>
-<p>你可以测试一下，如果把the_post_thumbnail(“thumbnail”)修改为下面这样的代码，看看输出的html结果是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">the_post_thumbnail(‘thumbnail’,array(‘class’ =&gt; ‘homepage-thumb’));</span><br></pre></td></tr></table></figure>
-<p>我这边输出的html为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;http://domety.com/wp-content/uploads/2010/10/screenshot-150x150.png&quot;</span><br><span class="line">class=&quot;homepage-thumb wp-post-image&quot; alt=&quot;&quot; title=&quot;screenshot&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p>可以和之前的html对比一下，不难发现class属性变成了我们设置的’homepage-thumb’。可以通过这种方法，把首页缩略图和分类页面的缩略图设置为不同的class属性。</p>
-<p>改变THE_POST_THUMBNAIL的HTML输出<br>我们可以使用filter来改变缩略图的html输出结果，下面的这段代码为缩略图加了一个文章链接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">add_filter( &apos;post_thumbnail_html&apos;, &apos;my_post_image_html&apos;, 10, 3 );  </span><br><span class="line">function my_post_image_html( $html, $post_id, $post_image_id ) &#123;  </span><br><span class="line">    $html = &apos;&lt;a href=&quot;&apos; . get_permalink( $post_id ) . &apos;&quot; title=&quot;&apos; . esc_attr( get_post_field( &apos;post_title&apos;, $post_id ) ) . &apos;&quot;&gt;&apos; . $html . &apos;&lt;/a&gt;&apos;;  </span><br><span class="line">    return $html;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当你点击缩略图的时候就会跳转到相应的文章内页。</p>
-<p>检测文章是否有缩略图<br>一个良好的习惯就是在调用the_post_thumbnail函数之前，先检测一下该文章有没有设置缩略图，检测的方法是调用has_post_thumbnail函数，代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php if ( has_post_thumbnail() )  </span><br><span class="line">    the_post_thumbnail( &apos;thumbnail&apos; );?&gt;</span><br></pre></td></tr></table></figure></p>
-<p>结合本站之前的提取文章内图片做为缩略图的方法，现在可以合二为一：首先判断文章有没有设置缩略图，如果有就直接显示，如果没有再提取文章内的图片为缩略图。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/*  </span><br><span class="line"></span><br><span class="line">* 缩略图</span><br><span class="line"></span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">function dm_the_thumbnail() &#123;  </span><br><span class="line"></span><br><span class="line">    global $post;  </span><br><span class="line"></span><br><span class="line">    // 判断该文章是否设置的缩略图，如果有则直接显示  </span><br><span class="line"></span><br><span class="line">    if ( has_post_thumbnail() ) &#123;  </span><br><span class="line"></span><br><span class="line">        echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        the_post_thumbnail(&apos;thumbnail&apos;);  </span><br><span class="line"></span><br><span class="line">        echo &apos;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">    &#125; else &#123; //如果文章没有设置缩略图，则查找文章内是否包含图片  </span><br><span class="line"></span><br><span class="line">        $content = $post-&gt;post_content;  </span><br><span class="line"></span><br><span class="line">        preg_match_all(&apos;/&lt;img.*?(?: |\\t|\\r|\\n)?src=[\&apos;&quot;]?(.+?)[\&apos;&quot;]?(?:(?: |\\t|\\r|\\n)+.*?)?&gt;/sim&apos;, $content, $strResult, PREG_PATTERN_ORDER);  </span><br><span class="line"></span><br><span class="line">        $n = count($strResult[1]);  </span><br><span class="line"></span><br><span class="line">        if($n &gt; 0)&#123; // 如果文章内包含有图片，就用第一张图片做为缩略图  </span><br><span class="line"></span><br><span class="line">            echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&lt;img src=&quot;&apos;.$strResult[1][0].&apos;&quot; alt=&quot;缩略图&quot; /&gt;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        &#125;else &#123; // 如果文章内没有图片，则用默认的图片。  </span><br><span class="line"></span><br><span class="line">            echo &apos;&lt;a href=&quot;&apos;.get_permalink().&apos;&quot; title=&quot;阅读全文&quot;&gt;&lt;img src=&quot;&apos;.get_bloginfo(&apos;template_url&apos;).&apos;/imgs/default_thumbnail.jpg&quot; alt=&quot;缩略图&quot; /&gt;&lt;/a&gt;&apos;;  </span><br><span class="line"></span><br><span class="line">        &#125;  </span><br><span class="line"></span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>有兴趣的朋友可以把以上代码复制到functions.php文件中，然后调用dm_the_thumbnail()即可。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/08/09/缩略图/" data-id="civ8f5oid000k9pauannvmuxx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-获取wordpress内容" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/08/获取wordpress内容/" class="article-date">
-  <time datetime="2016-08-08T08:09:43.000Z" itemprop="datePublished">2016-08-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/08/获取wordpress内容/">获取wordpress内容</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply_filters(&apos;the_content&apos;, $post-&gt;post_content)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/08/08/获取wordpress内容/" data-id="civ8f5oie000l9paur9g3wkvy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-sublime快捷键" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/04/sublime快捷键/" class="article-date">
-  <time datetime="2016-08-04T07:40:28.000Z" itemprop="datePublished">2016-08-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/diyxiaoshitou" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/04/sublime快捷键/">mac sublime3快捷键</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">⌘ + <span class="built_in">shift</span> + k  //编辑成对的元素标签</span><br><span class="line">control + <span class="built_in">shift</span> + k  //删除行</span><br><span class="line">⌘ + <span class="built_in">shift</span> + d  //复制行</span><br><span class="line"><span class="built_in">shift</span> + alt  //选择单词</span><br><span class="line">⌘+k ⌘+l  //转换成小写</span><br><span class="line">⌘+k ⌘+u  //转换成大写</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/08/04/sublime快捷键/" data-id="civ8f5ohx00069paumb66qdnm" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-wordpress菜单" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/27/wordpress菜单/" class="article-date">
-  <time datetime="2016-07-27T03:14:36.000Z" itemprop="datePublished">2016-07-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/27/wordpress菜单/">wordpress菜单</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>1.添加菜单 <strong>function.php</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//添加菜单</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">function</span>_exists(<span class="string">'register_nav_menus'</span>)) &#123;</span><br><span class="line">    register_nav_menus(</span><br><span class="line">        array(</span><br><span class="line">            <span class="string">'header-menu'</span>=&gt;__(<span class="string">'主菜单'</span>), //  设置菜单的位置,设置后会在后台显示出来,后台可以设置主题对应的位置</span><br><span class="line">            <span class="string">'sub-menu'</span>=&gt;__(<span class="string">'副菜单'</span>),</span><br><span class="line">            <span class="string">'sider-menu'</span>=&gt;__(<span class="string">'侧边菜单'</span>),</span><br><span class="line">            <span class="string">'footer-menu'</span>=&gt;__(<span class="string">'底部的菜单'</span>),</span><br><span class="line"></span><br><span class="line">        )</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.页面调用 <strong>菜单</strong><br><code>下面的代码不用都写后台可以设置菜单对应的位置</code><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">wp_nav_menu(</span><br><span class="line">    <span class="keyword">array</span>(</span><br><span class="line">        <span class="string">'theme_location'</span> =&gt;<span class="string">'sub-menu'</span>, <span class="comment">//菜单的位置</span></span><br><span class="line">        <span class="string">'menu'</span>=&gt;<span class="string">'sub-menu'</span>,  <span class="comment">//菜单的名称</span></span><br><span class="line">        <span class="string">'container'</span>       =&gt; <span class="string">'nav'</span>, <span class="comment">//最外层容器标签名</span></span><br><span class="line">        <span class="string">'container_class'</span> =&gt; <span class="string">'primary'</span>, <span class="comment">//最外层容器class名</span></span><br><span class="line">        <span class="string">'container_id'</span>    =&gt; <span class="string">'feng'</span>,<span class="comment">//最外层容器id值</span></span><br><span class="line">        <span class="string">'menu_class'</span>      =&gt; <span class="string">'sf-menu'</span>, <span class="comment">//ul标签class</span></span><br><span class="line">        <span class="string">'menu_id'</span>         =&gt; <span class="string">'topnav'</span>,<span class="comment">//ul标签id</span></span><br><span class="line">        <span class="string">'echo'</span>            =&gt; <span class="keyword">true</span>,<span class="comment">//是否打印，默认是true，如果想将导航的代码作为赋值使用，可设置为false</span></span><br><span class="line">        <span class="string">'fallback_cb'</span>     =&gt; <span class="string">'wp_page_menu'</span>,<span class="comment">//备用的导航菜单函数，用于没有在后台设置导航时调用</span></span><br><span class="line">        <span class="string">'before'</span>          =&gt; <span class="string">'&lt;p&gt;'</span>,<span class="comment">//显示在导航a标签之前</span></span><br><span class="line">        <span class="string">'after'</span>           =&gt; <span class="string">'&lt;/p&gt;'</span>,<span class="comment">//显示在导航a标签之后</span></span><br><span class="line">        <span class="string">'link_before'</span>     =&gt; <span class="string">'?'</span>,<span class="comment">//显示在导航链接名之后</span></span><br><span class="line">        <span class="string">'link_after'</span>      =&gt; <span class="string">'??'</span>,<span class="comment">//显示在导航链接名之前</span></span><br><span class="line"><span class="comment">//        'items_wrap'      =&gt; '&lt;ul id="%1$s"&gt;%3$s&lt;/ul&gt;', //输出ul的格式,如果打开ul的class将去掉</span></span><br><span class="line">        <span class="string">'depth'</span>           =&gt; <span class="number">0</span>,<span class="comment">////显示的菜单层数，默认0，0是显示所有层</span></span><br><span class="line">        <span class="string">'walker'</span>          =&gt; <span class="string">''</span><span class="comment">// //调用一个对象定义显示导航菜单 ));例如菜单的描述</span></span><br><span class="line"></span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/07/27/wordpress菜单/" data-id="civ8f5oi8000g9pau6u270cxj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-wordpress体验" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/26/wordpress体验/" class="article-date">
-  <time datetime="2016-07-26T12:09:59.000Z" itemprop="datePublished">2016-07-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/26/wordpress体验/">wordpress体验</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="阅读设置"><a href="#阅读设置" class="headerlink" title="阅读设置"></a>阅读设置</h2><p><strong>首页显示</strong><br>您的最新文章（index.php）相当于文章列表页<br><strong>一个静态页面（在下方选择）</strong> (如果选择这个)<br><code>主页：</code> page.php(默认)  如果有<code>front-page.php</code>会优先调用显示<br><code>文章页：</code> 相当于文章列表页</p>
-<blockquote>
-<p>front-page  首页<br>    index.php   //（默认首页）新闻列表<br>    page  //单页面<br>    single.php // 文章页<br>    sidebar.php //侧边栏</p>
-</blockquote>
-<h2 id="页面规划"><a href="#页面规划" class="headerlink" title="页面规划"></a>页面规划</h2><p>所有的标题的<code>导航|子导航</code>，应该用 <strong>分类，和单页面</strong><br>里边的内容，应该用 <strong>新闻列表，帖子列表</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">bloginfo(<span class="string">'template_url'</span>)  //模板根目录</span><br><span class="line">home_url() //获取根路径 需要输出</span><br><span class="line">get_option(<span class="string">'home'</span>)  //获取根路径 需要输出</span><br><span class="line">get_post_meta(get_the_ID(), <span class="string">'jianjie'</span>, <span class="literal">true</span>) //获取自定义字段为“jianjie”的内容 需要输出</span><br><span class="line">the_permalink()  //获取连接</span><br><span class="line">the_title()  //获取标题</span><br><span class="line">the_post_thumbnail(<span class="string">'full'</span>)  //获取缩略图</span><br><span class="line">the_time(<span class="string">'l, F jS, Y'</span>)  //获取时间</span><br><span class="line">the_content()  //获取内容</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wp_list_pages(<span class="string">'title_li=&lt;h4&gt;'</span>.__(<span class="string">'关于我们'</span>).<span class="string">'&lt;/h4&gt;&amp;child_of=149&amp;sort_column=post_date'</span>) //获取页面的列表</span><br><span class="line">wp_nav_menu(<span class="string">'theme_location=footer-menu-support'</span>) //获取菜单</span><br></pre></td></tr></table></figure>
-<p>查询</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">query_posts(<span class="string">"showposts=5&amp;cat=13"</span>); <span class="comment">//查询</span></span><br><span class="line"></span><br><span class="line">$query_scroll = <span class="keyword">new</span> WP_Query(<span class="string">"showposts=5&amp;cat=13"</span>); <span class="comment">//查询建议用这个</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">if</span> ($query_scroll-&gt;have_posts()): <span class="keyword">while</span> ($query_scroll-&gt;have_posts()): $query_scroll-&gt;the_post(); <span class="meta">?&gt;</span></span><br><span class="line">    <span class="meta">&lt;?php</span> the_post_thumbnail(<span class="string">'full'</span>) <span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">endwhile</span>; <span class="keyword">endif</span>; <span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">wp_reset_query();<span class="comment">// 重置查询</span></span><br><span class="line"></span><br><span class="line">apply_filters(<span class="string">'the_content'</span>,$post-&gt;post_content)  <span class="comment">//单独获取内容</span></span><br></pre></td></tr></table></figure>
-<p>调用样式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"&lt;?php bloginfo('stylesheet_url')?&gt;"</span>&gt; //调用样式</span><br></pre></td></tr></table></figure></p>
-<p>默认添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wp_enqueue_script(<span class="string">"jquery"</span>)  //必须在下面的前面</span><br><span class="line">wp_head()</span><br><span class="line">wp_footer()</span><br></pre></td></tr></table></figure></p>
-<p>调用模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">get_template_part(&apos;single-product&apos;) //调用模板</span><br><span class="line">comments_template() //调用默认的评论模板</span><br><span class="line">get_sidebar() //引用侧栏</span><br></pre></td></tr></table></figure></p>
-<p>判断<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">in_category(array(18,20,21))  //在分类里</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/07/26/wordpress体验/" data-id="civ8f5oi4000b9paus9xoffrp" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-单行向上滚动" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/26/单行向上滚动/" class="article-date">
-  <time datetime="2016-07-26T10:14:02.000Z" itemprop="datePublished">2016-07-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/26/单行向上滚动/">单行向上滚动</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">	&lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">	&lt;script src=<span class="string">"http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">	&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">		p&#123; height: 80px;  overflow: hidden; width: 200px;&#125;</span><br><span class="line">		p a&#123; display: block; height: 80px;  &#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=<span class="string">"ty-text-slide"</span> style=<span class="string">"position:relative;"</span>&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;中央部门晒决算 国税系统津贴福利开支占近6成_新闻中心_中国网 &lt;/a&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;房地产税法最快2017年通过 百万房产或每年缴5千 &lt;/a&gt;</span><br><span class="line">    &lt;a style=<span class="string">"position: relative; margin-top: 0px;"</span> href=<span class="string">"#"</span>&gt;美媒:中国援助阿富汗打击恐怖组织 首批军事装备抵阿 &lt;/a&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">		//          显示滚动文字</span><br><span class="line">            var scroll_event;</span><br><span class="line">            var <span class="variable">$scroll_parent</span> = $(<span class="string">"#ty-text-slide"</span>);</span><br><span class="line">            var scroll_height = <span class="variable">$scroll_parent</span>.find(<span class="string">'a:first'</span>).height();</span><br><span class="line">            <span class="variable">$scroll_parent</span>.hover(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                clearInterval(scroll_event);</span><br><span class="line">            &#125;, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                scroll_event = <span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                    var _this = <span class="variable">$scroll_parent</span>;</span><br><span class="line">                    _this.find(<span class="string">'a:first'</span>).animate(&#123;<span class="string">"marginTop"</span>: -scroll_height + <span class="string">'px'</span>&#125;, 500, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                        _this.find(<span class="string">"a:first"</span>).css(&#123;marginTop: <span class="string">"0px"</span>&#125;).appendTo(_this);</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;, 2000);</span><br><span class="line">            &#125;).trigger(<span class="string">"mouseout"</span>);</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/07/26/单行向上滚动/" data-id="civ8f5oia000h9paupb1ubizn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/14/markdown/" class="article-date">
-  <time datetime="2016-07-14T02:03:24.000Z" itemprop="datePublished">2016-07-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/14/markdown/">使用 Travis CI 自动更新 GitHub Pages</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>每次更改完 NexT 文档 都要手动部署到 GitHub Pages，重复的次数多了就显得很麻烦，出错的几率也会变大。文档源码放置在 master 分支，最终部署文件在 gh-pages 分支。当在 master 分支更改某些内容之后，通过运行 gulp dist 来生成最终部署的 HTML 文件到 dist 目录，随后再进入 dist 目录初始化 git 仓库、添加文件、提交文件，最后将提交强制推送到远程 gh-pages 分支（因当心我会误将最终部署的 HTML 文件提交到 master 分支导致源码丢失，我在 GitHub 上把 master 分支给锁定了）。除此之外还有另外一个问题：如果 master 分支有 Pull Requests，我需要先将更新取回本地，然后编译更新再提交回远程 gh-pages 分支。</p>
-<p>年轻的想法</p>
-<p>于是，我就想这说将这个过程自动化。首先考虑了使用 GitHub Webhooks，这是 Github 提供的一种机制，使应用能与 Github 通讯。这种机制实际上就是 Pub/Sub，当 Github 监测到资源（如仓库）有变化就往预先设定的 URL 发送一个 POST 请求（Pub），告知变化情况，而后接收变化的服务器（Sub）即可做一些额外的事情。</p>
-<p>这个思路需要有一个服务器并启动一个服务来接收 Github 的请求。这里又有种不同的策略，这两种策略都是基于源码放置在 Github 的前提。第一个是源码将最终文档直接部署在这台服务器上（如使用 Nginx），当接收到 Github 通知直接编译更新到服务器指定的文件夹下即可。另一种策略是当服务器接收到通知后编译更新，而后将编译后的版本提交到 Github 仓库的 gh-pages 分支，让 Github 做 Host。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://diyxiaoshitou.github.io/2016/07/14/markdown/" data-id="civ8f5ohm00029paurd62ki8m" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/nginx/" style="font-size: 15px;">nginx</a> <a href="/tags/wordpress/" style="font-size: 20px;">wordpress</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/11/02/从一行代码里面学点JavaScript/">从一行代码里面学点JavaScript</a>
-          </li>
-        
-          <li>
-            <a href="/2016/11/02/试题/">试题</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/12/wordpress-logo/">wordpress_logo</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/09/缩略图/">wordpress 缩略图功能函数 the_post_thumbnail</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/08/获取wordpress内容/">获取wordpress内容</a>
-          </li>
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/diyxiaoshitou" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
         
       </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 diyxiaoshitou<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
+      <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>没有比人更高的山，没有比脚更远的路 &copy; 2016</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
 </footer>
 
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-</nav>
+  </div>
+</aside>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">没有比人更高的山，没有比脚更远的路</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header index-header">
+
+    <div class="container">
+        <h1 class="title">没有比人更高的山，没有比脚更远的路</h1>
+        
+         
+        <h5 class="subtitle">
+            
+            
+                Good good study day day up
+            
+
+        </h5>
+        
+    </div>
+
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item">
+            <article id="post-从一行代码里面学点JavaScript"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-11-02T09:40:03.000Z" itemprop="datePublished" class="post-time">
+  2016-11-02
+</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习/">学习</a></li></ul>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+    </div>
+
+    
 
 
-<script src="/js/script.js"></script>
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/11/02/从一行代码里面学点JavaScript/">从一行代码里面学点JavaScript</a>
+    </h3>
+  
 
-  </div>
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        现如今，JavaScript无处不在，因此关于JavaScript的新知识也是层出不穷。JavaScript的特点在于，要学习它的语法入门简简单，但是要精通使用它的方式却是一件不容易的事。
+来看看下面的这段代码，它来自于谷歌“名猿”Addy Osmani在几天前贴出的一段代码，它的作用是用来调试你的CSS层。全部代码只有三行，但是你绝对可以把它放在一行里面完成：
+12[].forEach.c...
+    
+    
+        <a href="/2016/11/02/从一行代码里面学点JavaScript/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/试题/">试题</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-试题"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-11-02T06:50:37.000Z" itemprop="datePublished" class="post-time">
+  2016-11-02
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/11/02/试题/">试题</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        1.写一个通用的事件侦听器函数123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081// &lt;!-- 通用的侦听函数 --&gt;   m...
+    
+    
+        <a href="/2016/11/02/试题/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-wordpress-logo"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-08-12T13:13:48.000Z" itemprop="datePublished" class="post-time">
+  2016-08-12
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/08/12/wordpress-logo/">wordpress_logo</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        123456789101112131415//添加logo  function.php 设置add_theme_support( 'custom-header', array(    'default-image'          =&gt; '',    'random-default'         =&gt; false,    'width'                  =...
+    
+    
+        <a href="/2016/08/12/wordpress-logo/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="wordpress-缩略图"
+  class="article-card article-type-wordpress" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-08-09T06:33:34.000Z" itemprop="datePublished" class="post-time">
+  2016-08-09
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/08/09/缩略图/">wordpress 缩略图功能函数 the_post_thumbnail</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        很多 WordPress 主题，特别是那些杂志型的主题，会给每篇日志加上一张缩略图，这种展现方式一般用在首页，可能单独出现，或者和日志摘要一起。但是目前位置没有一个标准的方法去实现日志缩略图，很多主题是使用 WordPress 自定义字段来实现日志缩略图功能，这样的设置比较复杂，虽然我在制作的很多 WordPress 项目中都是用这个方法，并且设置了直接上传缩略图的方法，但是还是略显麻烦。
+...
+    
+    
+        <a href="/2016/08/09/缩略图/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-获取wordpress内容"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-08-08T08:09:43.000Z" itemprop="datePublished" class="post-time">
+  2016-08-08
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/08/08/获取wordpress内容/">获取wordpress内容</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        1apply_filters(&apos;the_content&apos;, $post-&gt;post_content)
+
+    
+    
+        <a href="/2016/08/08/获取wordpress内容/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-sublime快捷键"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-08-04T07:40:28.000Z" itemprop="datePublished" class="post-time">
+  2016-08-04
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/08/04/sublime快捷键/">mac sublime3快捷键</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        123456⌘ + shift + k  //编辑成对的元素标签control + shift + k  //删除行⌘ + shift + d  //复制行shift + alt  //选择单词⌘+k ⌘+l  //转换成小写⌘+k ⌘+u  //转换成大写
+
+    
+    
+        <a href="/2016/08/04/sublime快捷键/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-wordpress菜单"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-07-27T03:14:36.000Z" itemprop="datePublished" class="post-time">
+  2016-07-27
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/07/27/wordpress菜单/">wordpress菜单</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        
+1.添加菜单 function.php
+123456789101112//添加菜单if (function_exists('register_nav_menus')) &#123;    register_nav_menus(        array(            'header-menu'=&gt;__('主菜单'), //  设置菜单的位置,设置后会在后台显示出来,后台可以...
+    
+    
+        <a href="/2016/07/27/wordpress菜单/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-wordpress体验"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-07-26T12:09:59.000Z" itemprop="datePublished" class="post-time">
+  2016-07-26
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/07/26/wordpress体验/">wordpress体验</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        
+阅读设置首页显示您的最新文章（index.php）相当于文章列表页一个静态页面（在下方选择） (如果选择这个)主页： page.php(默认)  如果有front-page.php会优先调用显示文章页： 相当于文章列表页
+
+front-page  首页    index.php   //（默认首页）新闻列表    page  //单页面    single.php // 文章页    si...
+    
+    
+        <a href="/2016/07/26/wordpress体验/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-单行向上滚动"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-07-26T10:14:02.000Z" itemprop="datePublished" class="post-time">
+  2016-07-26
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/07/26/单行向上滚动/">单行向上滚动</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        
+1234567891011121314151617181920212223242526272829303132333435363738&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;	&lt;meta charset="UTF-8"&gt;	&lt;title&gt;Document&lt;/title&gt;	&lt;scri...
+    
+    
+        <a href="/2016/07/26/单行向上滚动/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-markdown"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-07-14T02:03:24.000Z" itemprop="datePublished" class="post-time">
+  2016-07-14
+</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/07/14/markdown/">使用 Travis CI 自动更新 GitHub Pages</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        每次更改完 NexT 文档 都要手动部署到 GitHub Pages，重复的次数多了就显得很麻烦，出错的几率也会变大。文档源码放置在 master 分支，最终部署文件在 gh-pages 分支。当在 master 分支更改某些内容之后，通过运行 gulp dist 来生成最终部署的 HTML 文件到 dist 目录，随后再进入 dist 目录初始化 git 仓库、添加文件、提交文件，最后将提...
+    
+    
+        <a href="/2016/07/14/markdown/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+    </ul>
+
+    
+<nav id="page-nav">
+    <div class="inner">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    </div>
+</nav>
+
+
+</div>
+  </main>
+  <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>var BLOG = { ROOT: '/' };
+BLOG.SHARE = {
+title: "没有比人更高的山，没有比脚更远的路",
+pic: "//placekitten.com/200/200",
+summary: document.getElementsByName('summary')[0].content,
+url: "http://diyxiaoshitou.github.io/" }
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script src="/js/main.min.js?v=1.1.9"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.1.9"></script>
+
+
+
+
+
+
+
+
+
 </body>
 </html>
