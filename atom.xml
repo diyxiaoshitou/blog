@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>没有比人更高的山，没有比脚更远的路</title>
   <subtitle>Good good study day day up</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://diyxiaoshitou.github.io/"/>
   <updated>2017-02-09T05:48:12.000Z</updated>
