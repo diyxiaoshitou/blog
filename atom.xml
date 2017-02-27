@@ -4,9 +4,9 @@
   <subtitle>Good good study day day up</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://diyxiaoshitou.github.io/blog/"/>
+  <link href="http://diyxiaoshitou.github.io/"/>
   <updated>2017-02-09T05:48:12.000Z</updated>
-  <id>http://diyxiaoshitou.github.io/blog/</id>
+  <id>http://diyxiaoshitou.github.io/</id>
   
   <author>
     <name>diyxiaoshitou</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>左右自适应布局</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2017/02/09/css%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2017/02/09/css自适应布局/</id>
+    <link href="http://diyxiaoshitou.github.io/2017/02/09/css%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80/"/>
+    <id>http://diyxiaoshitou.github.io/2017/02/09/css自适应布局/</id>
     <published>2017-02-09T05:43:37.000Z</published>
     <updated>2017-02-09T05:48:12.000Z</updated>
     
@@ -37,14 +37,14 @@
     </summary>
     
     
-      <category term="css" scheme="http://diyxiaoshitou.github.io/blog/tags/css/"/>
+      <category term="css" scheme="http://diyxiaoshitou.github.io/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>用js触发CSS3-transition过渡动画</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2017/02/09/%E7%94%A8js%E8%A7%A6%E5%8F%91CSS3-transition%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2017/02/09/用js触发CSS3-transition过渡动画/</id>
+    <link href="http://diyxiaoshitou.github.io/2017/02/09/%E7%94%A8js%E8%A7%A6%E5%8F%91CSS3-transition%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB/"/>
+    <id>http://diyxiaoshitou.github.io/2017/02/09/用js触发CSS3-transition过渡动画/</id>
     <published>2017-02-09T01:35:36.000Z</published>
     <updated>2017-02-09T02:04:43.000Z</updated>
     
@@ -63,14 +63,14 @@
     </summary>
     
     
-      <category term="css3" scheme="http://diyxiaoshitou.github.io/blog/tags/css3/"/>
+      <category term="css3" scheme="http://diyxiaoshitou.github.io/tags/css3/"/>
     
   </entry>
   
   <entry>
     <title>node+express+mongodb登录实例</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/12/07/node-express-mongodb%E7%99%BB%E5%BD%95%E5%AE%9E%E4%BE%8B/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/12/07/node-express-mongodb登录实例/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/12/07/node-express-mongodb%E7%99%BB%E5%BD%95%E5%AE%9E%E4%BE%8B/"/>
+    <id>http://diyxiaoshitou.github.io/2016/12/07/node-express-mongodb登录实例/</id>
     <published>2016-12-07T08:16:20.000Z</published>
     <updated>2016-12-07T08:56:58.000Z</updated>
     
@@ -111,14 +111,14 @@
     </summary>
     
     
-      <category term="node" scheme="http://diyxiaoshitou.github.io/blog/tags/node/"/>
+      <category term="node" scheme="http://diyxiaoshitou.github.io/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>jQuery对象和DOM对象之间的转换实现</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/11/23/jQuery%E5%AF%B9%E8%B1%A1%E5%92%8CDOM%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/11/23/jQuery对象和DOM对象之间的转换实现/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/11/23/jQuery%E5%AF%B9%E8%B1%A1%E5%92%8CDOM%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://diyxiaoshitou.github.io/2016/11/23/jQuery对象和DOM对象之间的转换实现/</id>
     <published>2016-11-23T07:29:42.000Z</published>
     <updated>2016-11-23T07:32:07.000Z</updated>
     
@@ -141,8 +141,8 @@
   
   <entry>
     <title>跨域</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/11/23/%E8%B7%A8%E5%9F%9F/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/11/23/跨域/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/11/23/%E8%B7%A8%E5%9F%9F/"/>
+    <id>http://diyxiaoshitou.github.io/2016/11/23/跨域/</id>
     <published>2016-11-23T02:12:44.000Z</published>
     <updated>2016-11-23T02:28:25.000Z</updated>
     
@@ -186,8 +186,8 @@
   
   <entry>
     <title>小球运动</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/11/15/%E5%B0%8F%E7%90%83%E8%BF%90%E5%8A%A8/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/11/15/小球运动/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/11/15/%E5%B0%8F%E7%90%83%E8%BF%90%E5%8A%A8/"/>
+    <id>http://diyxiaoshitou.github.io/2016/11/15/小球运动/</id>
     <published>2016-11-14T16:15:53.000Z</published>
     <updated>2016-11-14T17:17:38.000Z</updated>
     
@@ -203,14 +203,14 @@
     </summary>
     
     
-      <category term="jascript" scheme="http://diyxiaoshitou.github.io/blog/tags/jascript/"/>
+      <category term="jascript" scheme="http://diyxiaoshitou.github.io/tags/jascript/"/>
     
   </entry>
   
   <entry>
     <title>我们需要什么的前端环境</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/11/12/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E7%9A%84%E5%89%8D%E7%AB%AF%E7%8E%AF%E5%A2%83/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/11/12/我们需要什么的前端环境/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/11/12/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E7%9A%84%E5%89%8D%E7%AB%AF%E7%8E%AF%E5%A2%83/"/>
+    <id>http://diyxiaoshitou.github.io/2016/11/12/我们需要什么的前端环境/</id>
     <published>2016-11-11T16:21:08.000Z</published>
     <updated>2016-11-12T04:10:08.000Z</updated>
     
@@ -230,14 +230,14 @@
     </summary>
     
     
-      <category term="Angular" scheme="http://diyxiaoshitou.github.io/blog/tags/Angular/"/>
+      <category term="Angular" scheme="http://diyxiaoshitou.github.io/tags/Angular/"/>
     
   </entry>
   
   <entry>
     <title>从一行代码里面学点JavaScript</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/11/02/%E4%BB%8E%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E9%87%8C%E9%9D%A2%E5%AD%A6%E7%82%B9JavaScript/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/11/02/从一行代码里面学点JavaScript/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/11/02/%E4%BB%8E%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E9%87%8C%E9%9D%A2%E5%AD%A6%E7%82%B9JavaScript/"/>
+    <id>http://diyxiaoshitou.github.io/2016/11/02/从一行代码里面学点JavaScript/</id>
     <published>2016-11-02T09:40:03.000Z</published>
     <updated>2016-11-08T19:03:21.000Z</updated>
     
@@ -277,19 +277,19 @@
     
     </summary>
     
-      <category term="学习" scheme="http://diyxiaoshitou.github.io/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://diyxiaoshitou.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="js" scheme="http://diyxiaoshitou.github.io/blog/tags/js/"/>
+      <category term="js" scheme="http://diyxiaoshitou.github.io/tags/js/"/>
     
-      <category term="试题" scheme="http://diyxiaoshitou.github.io/blog/tags/%E8%AF%95%E9%A2%98/"/>
+      <category term="试题" scheme="http://diyxiaoshitou.github.io/tags/%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>试题</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/11/02/%E8%AF%95%E9%A2%98/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/11/02/试题/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/11/02/%E8%AF%95%E9%A2%98/"/>
+    <id>http://diyxiaoshitou.github.io/2016/11/02/试题/</id>
     <published>2016-11-02T06:50:37.000Z</published>
     <updated>2016-11-18T03:12:37.000Z</updated>
     
@@ -316,8 +316,8 @@
   
   <entry>
     <title>wordpress_logo</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/08/12/wordpress-logo/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/08/12/wordpress-logo/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/08/12/wordpress-logo/"/>
+    <id>http://diyxiaoshitou.github.io/2016/08/12/wordpress-logo/</id>
     <published>2016-08-12T13:13:48.000Z</published>
     <updated>2016-08-12T13:17:27.000Z</updated>
     
@@ -332,14 +332,14 @@
     </summary>
     
     
-      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/blog/tags/wordpress/"/>
+      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/tags/wordpress/"/>
     
   </entry>
   
   <entry>
     <title>wordpress 缩略图功能函数 the_post_thumbnail</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/08/09/%E7%BC%A9%E7%95%A5%E5%9B%BE/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/08/09/缩略图/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/08/09/%E7%BC%A9%E7%95%A5%E5%9B%BE/"/>
+    <id>http://diyxiaoshitou.github.io/2016/08/09/缩略图/</id>
     <published>2016-08-09T06:33:34.000Z</published>
     <updated>2016-08-09T06:41:34.000Z</updated>
     
@@ -397,8 +397,8 @@
   
   <entry>
     <title>获取wordpress内容</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/08/08/%E8%8E%B7%E5%8F%96wordpress%E5%86%85%E5%AE%B9/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/08/08/获取wordpress内容/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/08/08/%E8%8E%B7%E5%8F%96wordpress%E5%86%85%E5%AE%B9/"/>
+    <id>http://diyxiaoshitou.github.io/2016/08/08/获取wordpress内容/</id>
     <published>2016-08-08T08:09:43.000Z</published>
     <updated>2016-08-08T08:10:51.000Z</updated>
     
@@ -412,14 +412,14 @@
     </summary>
     
     
-      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/blog/tags/wordpress/"/>
+      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/tags/wordpress/"/>
     
   </entry>
   
   <entry>
     <title>mac sublime3快捷键</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/08/04/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/08/04/sublime快捷键/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/08/04/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://diyxiaoshitou.github.io/2016/08/04/sublime快捷键/</id>
     <published>2016-08-04T07:40:28.000Z</published>
     <updated>2016-11-23T02:43:01.000Z</updated>
     
@@ -438,14 +438,14 @@
     </summary>
     
     
-      <category term="Mac" scheme="http://diyxiaoshitou.github.io/blog/tags/Mac/"/>
+      <category term="Mac" scheme="http://diyxiaoshitou.github.io/tags/Mac/"/>
     
   </entry>
   
   <entry>
     <title>wordpress菜单</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/07/27/wordpress%E8%8F%9C%E5%8D%95/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/07/27/wordpress菜单/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/07/27/wordpress%E8%8F%9C%E5%8D%95/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/27/wordpress菜单/</id>
     <published>2016-07-27T03:14:36.000Z</published>
     <updated>2016-07-27T05:43:34.000Z</updated>
     
@@ -464,14 +464,14 @@
     </summary>
     
     
-      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/blog/tags/wordpress/"/>
+      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/tags/wordpress/"/>
     
   </entry>
   
   <entry>
     <title>wordpress体验</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/07/26/wordpress%E4%BD%93%E9%AA%8C/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/07/26/wordpress体验/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/07/26/wordpress%E4%BD%93%E9%AA%8C/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/26/wordpress体验/</id>
     <published>2016-07-26T12:09:59.000Z</published>
     <updated>2016-08-09T17:39:49.000Z</updated>
     
@@ -498,14 +498,14 @@
     </summary>
     
     
-      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/blog/tags/wordpress/"/>
+      <category term="wordpress" scheme="http://diyxiaoshitou.github.io/tags/wordpress/"/>
     
   </entry>
   
   <entry>
     <title>单行向上滚动</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/07/26/%E5%8D%95%E8%A1%8C%E5%90%91%E4%B8%8A%E6%BB%9A%E5%8A%A8/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/07/26/单行向上滚动/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/07/26/%E5%8D%95%E8%A1%8C%E5%90%91%E4%B8%8A%E6%BB%9A%E5%8A%A8/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/26/单行向上滚动/</id>
     <published>2016-07-26T10:14:02.000Z</published>
     <updated>2016-07-26T10:17:56.000Z</updated>
     
@@ -521,14 +521,14 @@
     </summary>
     
     
-      <category term="js" scheme="http://diyxiaoshitou.github.io/blog/tags/js/"/>
+      <category term="js" scheme="http://diyxiaoshitou.github.io/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>使用 Travis CI 自动更新 GitHub Pages</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/07/14/markdown/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/07/14/markdown/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/07/14/markdown/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/14/markdown/</id>
     <published>2016-07-14T02:03:24.000Z</published>
     <updated>2016-07-27T17:51:34.000Z</updated>
     
@@ -549,8 +549,8 @@
   
   <entry>
     <title>nginx.conf</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/07/14/nginx-conf/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/07/14/nginx-conf/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/07/14/nginx-conf/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/14/nginx-conf/</id>
     <published>2016-07-13T17:38:06.000Z</published>
     <updated>2016-07-27T16:11:04.000Z</updated>
     
@@ -568,14 +568,14 @@
     </summary>
     
     
-      <category term="nginx" scheme="http://diyxiaoshitou.github.io/blog/tags/nginx/"/>
+      <category term="nginx" scheme="http://diyxiaoshitou.github.io/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>phone.conf</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/07/14/phone-conf/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/07/14/phone-conf/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/07/14/phone-conf/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/14/phone-conf/</id>
     <published>2016-07-13T17:27:18.000Z</published>
     <updated>2016-07-13T17:36:57.000Z</updated>
     
@@ -592,14 +592,14 @@
     </summary>
     
     
-      <category term="nginx" scheme="http://diyxiaoshitou.github.io/blog/tags/nginx/"/>
+      <category term="nginx" scheme="http://diyxiaoshitou.github.io/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>wordpress_conf</title>
-    <link href="http://diyxiaoshitou.github.io/blog/2016/07/14/wordpress-conf/"/>
-    <id>http://diyxiaoshitou.github.io/blog/2016/07/14/wordpress-conf/</id>
+    <link href="http://diyxiaoshitou.github.io/2016/07/14/wordpress-conf/"/>
+    <id>http://diyxiaoshitou.github.io/2016/07/14/wordpress-conf/</id>
     <published>2016-07-13T17:15:37.000Z</published>
     <updated>2016-07-13T17:36:27.000Z</updated>
     
@@ -617,7 +617,7 @@
     </summary>
     
     
-      <category term="nginx" scheme="http://diyxiaoshitou.github.io/blog/tags/nginx/"/>
+      <category term="nginx" scheme="http://diyxiaoshitou.github.io/tags/nginx/"/>
     
   </entry>
   
